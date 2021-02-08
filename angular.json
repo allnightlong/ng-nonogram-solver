@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nonogram-angular-solver": {
+    "ng-nonogram-solver": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -50,13 +46,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -65,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "nonogram-angular-solver:build"
+            "browserTarget": "ng-nonogram-solver:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "nonogram-angular-solver:build:production"
+              "browserTarget": "ng-nonogram-solver:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nonogram-angular-solver:build"
+            "browserTarget": "ng-nonogram-solver:build"
           }
         },
         "test": {
@@ -113,16 +109,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "nonogram-angular-solver:serve"
+            "devServerTarget": "ng-nonogram-solver:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "nonogram-angular-solver:serve:production"
+              "devServerTarget": "ng-nonogram-solver:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "nonogram-angular-solver"
+  "defaultProject": "ng-nonogram-solver"
 }
