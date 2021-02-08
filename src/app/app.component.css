@@ -1,0 +1,441 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}
+
+
+#nonogram {
+  margin: 0 auto;
+  border-width: 0
+}
+
+#nonogram .r {
+  border-right-width: 2px
+}
+
+#nonogram .b, #nonogram .b > td {
+  border-bottom-width: 2px
+}
+
+#nonogram .puzzle-cell {
+  touch-action: none
+}
+
+#nonogram .puzzle-out {
+  border: none
+}
+
+#nonogram .left-numbers {
+  padding: 0 5px;
+  text-align: right;
+  border-right-width: 2px
+}
+
+#nonogram.solved .puzzle-cell-on {
+  -webkit-animation: colorchange 3s;
+  animation: colorchange 3s
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+    background: red
+  }
+
+  14% {
+    background: orange
+  }
+
+  28% {
+    background: #ff0
+  }
+
+  43% {
+    background: green
+  }
+
+  57% {
+    background: #00f
+  }
+
+  71% {
+    background: indigo
+  }
+
+  86% {
+    background: violet
+  }
+
+  to {
+    background: auto
+  }
+}
+
+@keyframes colorchange {
+  0% {
+    background: red
+  }
+
+  14% {
+    background: orange
+  }
+
+  28% {
+    background: #ff0
+  }
+
+  43% {
+    background: green
+  }
+
+  57% {
+    background: #00f
+  }
+
+  71% {
+    background: indigo
+  }
+
+  86% {
+    background: violet
+  }
+
+  to {
+    background: auto
+  }
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-1 {
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-2 {
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-3 {
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-4 {
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-5 {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-6 {
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-7 {
+  -webkit-animation-delay: .7s;
+  animation-delay: .7s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-8 {
+  -webkit-animation-delay: .8s;
+  animation-delay: .8s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-9 {
+  -webkit-animation-delay: .9s;
+  animation-delay: .9s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-10 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-11 {
+  -webkit-animation-delay: 1.1s;
+  animation-delay: 1.1s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-12 {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-13 {
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-14 {
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-15 {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-16 {
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-17 {
+  -webkit-animation-delay: 1.7s;
+  animation-delay: 1.7s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-18 {
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-19 {
+  -webkit-animation-delay: 1.9s;
+  animation-delay: 1.9s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-20 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-21 {
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-22 {
+  -webkit-animation-delay: 2.2s;
+  animation-delay: 2.2s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-23 {
+  -webkit-animation-delay: 2.3s;
+  animation-delay: 2.3s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-24 {
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-25 {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-26 {
+  -webkit-animation-delay: 2.6s;
+  animation-delay: 2.6s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-27 {
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-28 {
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-29 {
+  -webkit-animation-delay: 2.9s;
+  animation-delay: 2.9s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-30 {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-31 {
+  -webkit-animation-delay: 3.1s;
+  animation-delay: 3.1s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-32 {
+  -webkit-animation-delay: 3.2s;
+  animation-delay: 3.2s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-33 {
+  -webkit-animation-delay: 3.3s;
+  animation-delay: 3.3s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-34 {
+  -webkit-animation-delay: 3.4s;
+  animation-delay: 3.4s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-35 {
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-36 {
+  -webkit-animation-delay: 3.6s;
+  animation-delay: 3.6s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-37 {
+  -webkit-animation-delay: 3.7s;
+  animation-delay: 3.7s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-38 {
+  -webkit-animation-delay: 3.8s;
+  animation-delay: 3.8s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-39 {
+  -webkit-animation-delay: 3.9s;
+  animation-delay: 3.9s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-40 {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-41 {
+  -webkit-animation-delay: 4.1s;
+  animation-delay: 4.1s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-42 {
+  -webkit-animation-delay: 4.2s;
+  animation-delay: 4.2s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-43 {
+  -webkit-animation-delay: 4.3s;
+  animation-delay: 4.3s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-44 {
+  -webkit-animation-delay: 4.4s;
+  animation-delay: 4.4s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-45 {
+  -webkit-animation-delay: 4.5s;
+  animation-delay: 4.5s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-46 {
+  -webkit-animation-delay: 4.6s;
+  animation-delay: 4.6s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-47 {
+  -webkit-animation-delay: 4.7s;
+  animation-delay: 4.7s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-48 {
+  -webkit-animation-delay: 4.8s;
+  animation-delay: 4.8s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-49 {
+  -webkit-animation-delay: 4.9s;
+  animation-delay: 4.9s
+}
+
+#nonogram.solved .puzzle-cell-on.puzzle-anim-50 {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s
+}
+
+td.puzzle-cell {
+  width: 20px;
+  height: 20px;
+  cursor: "pointer";
+  touch-action: "none"
+}
+
+td.puzzle-cell.puzzle-cell-on {
+  background: #000
+}
+
+td.puzzle-cell.puzzle-cell-off {
+  background: url(/x.png) no-repeat 50%
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  margin: 100px auto;
+  -webkit-animation: rotateplane 1.2s ease-in-out infinite;
+  animation: rotateplane 1.2s ease-in-out infinite
+}
+
+@-webkit-keyframes rotateplane {
+  0% {
+    -webkit-transform: perspective(120px)
+  }
+
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg)
+  }
+
+  to {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+  }
+}
+
+@keyframes rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  }
+
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  }
+
+  to {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
+  }
+}
+
+.navbar {
+  background-color: #563d7c
+}
+
+.navbar .navbar-collapse {
+  -webkit-transition: .5s ease-in;
+  transition: .5s ease-in;
+  max-height: 0;
+  display: block
+}
+
+.navbar .navbar-collapse.show {
+  max-height: 500px
+}
+
+.navbar .dropdown-item {
+  font-size: 13px;
+  padding: 0 .5rem
+}
+
+/*# sourceMappingURL=main.36ce18b0.chunk.css.map */
