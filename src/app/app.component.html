@@ -1,789 +1,789 @@
 <div class="text-center">
   <h1>ng nonogram solver</h1>
-</div>
 
-<table id="nonogram" cellspacing="0" cellpadding="1" border="1">
-  <tbody>
-  <tr class="b">
-    <td class="r">&nbsp;</td>
-    <td valign="bottom">1<br>4<br>1<br>1<br>2<br>3<br></td>
-    <td valign="bottom">2<br>4<br>1<br>1<br>2<br>1<br>1<br></td>
-    <td valign="bottom">2<br>4<br>1<br>1<br>1<br>2<br>1<br>1<br></td>
-    <td valign="bottom">1<br>1<br>1<br>1<br>1<br>2<br>1<br>1<br></td>
-    <td valign="bottom" class="r">1<br>1<br>2<br>2<br>1<br>1<br></td>
-    <td valign="bottom">1<br>1<br>2<br>1<br>2<br>1<br>1<br></td>
-    <td valign="bottom">2<br>1<br>1<br>2<br>1<br>2<br>2<br></td>
-    <td valign="bottom">1<br>1<br>3<br>1<br>1<br>2<br>2<br>3<br></td>
-    <td valign="bottom">1<br>2<br>3<br>2<br>1<br>3<br></td>
-    <td valign="bottom" class="r">1<br>2<br>2<br>2<br>1<br>3<br></td>
-    <td valign="bottom">1<br>1<br>2<br>1<br>3<br></td>
-    <td valign="bottom">1<br>1<br>1<br>2<br>1<br>3<br></td>
-    <td valign="bottom">2<br>1<br>1<br>2<br>1<br>3<br></td>
-    <td valign="bottom">1<br>1<br>1<br>1<br>1<br>3<br></td>
-    <td valign="bottom" class="r">1<br>2<br>1<br>2<br>1<br>3<br></td>
-    <td valign="bottom">1<br>4<br>1<br>1<br>2<br>5<br></td>
-    <td valign="bottom">2<br>3<br>3<br>3<br>5<br></td>
-    <td valign="bottom">7<br>3<br>1<br>8<br></td>
-    <td valign="bottom">3<br>1<br>1<br>1<br>1<br>3<br>4<br></td>
-    <td valign="bottom" class="r">1<br>1<br>1<br>1<br>3<br>2<br>1<br>1<br></td>
-    <td valign="bottom">2<br>1<br>1<br>1<br>3<br>2<br>1<br>1<br></td>
-    <td valign="bottom">2<br>2<br>1<br>4<br>3<br>1<br>1<br></td>
-    <td valign="bottom">2<br>2<br>1<br>1<br>1<br>3<br>1<br>1<br></td>
-    <td valign="bottom">5<br>3<br>1<br>3<br>1<br>1<br></td>
-    <td valign="bottom">1<br>2<br>2<br>1<br>1<br>2<br>3<br>1<br></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">3</td>
-    <td row="0" col="0" class="puzzle-cell puzzle-anim-25" id="0x0"></td>
-    <td row="0" col="1" class="puzzle-cell puzzle-anim-26" id="0x1"></td>
-    <td row="0" col="2" class="puzzle-cell puzzle-anim-27" id="0x2"></td>
-    <td row="0" col="3" class="puzzle-cell puzzle-anim-28" id="0x3"></td>
-    <td row="0" col="4" class="puzzle-cell puzzle-anim-29 r" id="0x4"></td>
-    <td row="0" col="5" class="puzzle-cell puzzle-anim-30" id="0x5"></td>
-    <td row="0" col="6" class="puzzle-cell puzzle-anim-31" id="0x6"></td>
-    <td row="0" col="7" class="puzzle-cell puzzle-anim-32" id="0x7"></td>
-    <td row="0" col="8" class="puzzle-cell puzzle-anim-33" id="0x8"></td>
-    <td row="0" col="9" class="puzzle-cell puzzle-anim-34 r" id="0x9"></td>
-    <td row="0" col="10" class="puzzle-cell puzzle-anim-35" id="0x10"></td>
-    <td row="0" col="11" class="puzzle-cell puzzle-anim-36" id="0x11"></td>
-    <td row="0" col="12" class="puzzle-cell puzzle-anim-37" id="0x12"></td>
-    <td row="0" col="13" class="puzzle-cell puzzle-anim-38" id="0x13"></td>
-    <td row="0" col="14" class="puzzle-cell puzzle-anim-39 r" id="0x14"></td>
-    <td row="0" col="15" class="puzzle-cell puzzle-anim-40" id="0x15"></td>
-    <td row="0" col="16" class="puzzle-cell puzzle-anim-41" id="0x16"></td>
-    <td row="0" col="17" class="puzzle-cell puzzle-anim-42" id="0x17"></td>
-    <td row="0" col="18" class="puzzle-cell puzzle-anim-43" id="0x18"></td>
-    <td row="0" col="19" class="puzzle-cell puzzle-anim-44 r" id="0x19"></td>
-    <td row="0" col="20" class="puzzle-cell puzzle-anim-45" id="0x20"></td>
-    <td row="0" col="21" class="puzzle-cell puzzle-anim-46" id="0x21"></td>
-    <td row="0" col="22" class="puzzle-cell puzzle-anim-47" id="0x22"></td>
-    <td row="0" col="23" class="puzzle-cell puzzle-anim-48" id="0x23"></td>
-    <td row="0" col="24" class="puzzle-cell puzzle-anim-49" id="0x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">5</td>
-    <td row="1" col="0" class="puzzle-cell puzzle-anim-24" id="1x0"></td>
-    <td row="1" col="1" class="puzzle-cell puzzle-anim-25" id="1x1"></td>
-    <td row="1" col="2" class="puzzle-cell puzzle-anim-26" id="1x2"></td>
-    <td row="1" col="3" class="puzzle-cell puzzle-anim-27" id="1x3"></td>
-    <td row="1" col="4" class="puzzle-cell puzzle-anim-28 r" id="1x4"></td>
-    <td row="1" col="5" class="puzzle-cell puzzle-anim-29" id="1x5"></td>
-    <td row="1" col="6" class="puzzle-cell puzzle-anim-30" id="1x6"></td>
-    <td row="1" col="7" class="puzzle-cell puzzle-anim-31" id="1x7"></td>
-    <td row="1" col="8" class="puzzle-cell puzzle-anim-32" id="1x8"></td>
-    <td row="1" col="9" class="puzzle-cell puzzle-anim-33 r" id="1x9"></td>
-    <td row="1" col="10" class="puzzle-cell puzzle-anim-34" id="1x10"></td>
-    <td row="1" col="11" class="puzzle-cell puzzle-anim-35" id="1x11"></td>
-    <td row="1" col="12" class="puzzle-cell puzzle-anim-36" id="1x12"></td>
-    <td row="1" col="13" class="puzzle-cell puzzle-anim-37" id="1x13"></td>
-    <td row="1" col="14" class="puzzle-cell puzzle-anim-38 r" id="1x14"></td>
-    <td row="1" col="15" class="puzzle-cell puzzle-anim-39" id="1x15"></td>
-    <td row="1" col="16" class="puzzle-cell puzzle-anim-40" id="1x16"></td>
-    <td row="1" col="17" class="puzzle-cell puzzle-anim-41" id="1x17"></td>
-    <td row="1" col="18" class="puzzle-cell puzzle-anim-42" id="1x18"></td>
-    <td row="1" col="19" class="puzzle-cell puzzle-anim-43 r" id="1x19"></td>
-    <td row="1" col="20" class="puzzle-cell puzzle-anim-44" id="1x20"></td>
-    <td row="1" col="21" class="puzzle-cell puzzle-anim-45" id="1x21"></td>
-    <td row="1" col="22" class="puzzle-cell puzzle-anim-46" id="1x22"></td>
-    <td row="1" col="23" class="puzzle-cell puzzle-anim-47" id="1x23"></td>
-    <td row="1" col="24" class="puzzle-cell puzzle-anim-48" id="1x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">3 2 1 8</td>
-    <td row="2" col="0" class="puzzle-cell puzzle-anim-23" id="2x0"></td>
-    <td row="2" col="1" class="puzzle-cell puzzle-anim-24" id="2x1"></td>
-    <td row="2" col="2" class="puzzle-cell puzzle-anim-25" id="2x2"></td>
-    <td row="2" col="3" class="puzzle-cell puzzle-anim-26" id="2x3"></td>
-    <td row="2" col="4" class="puzzle-cell puzzle-anim-27 r" id="2x4"></td>
-    <td row="2" col="5" class="puzzle-cell puzzle-anim-28" id="2x5"></td>
-    <td row="2" col="6" class="puzzle-cell puzzle-anim-29" id="2x6"></td>
-    <td row="2" col="7" class="puzzle-cell puzzle-anim-30" id="2x7"></td>
-    <td row="2" col="8" class="puzzle-cell puzzle-anim-31" id="2x8"></td>
-    <td row="2" col="9" class="puzzle-cell puzzle-anim-32 r" id="2x9"></td>
-    <td row="2" col="10" class="puzzle-cell puzzle-anim-33" id="2x10"></td>
-    <td row="2" col="11" class="puzzle-cell puzzle-anim-34" id="2x11"></td>
-    <td row="2" col="12" class="puzzle-cell puzzle-anim-35" id="2x12"></td>
-    <td row="2" col="13" class="puzzle-cell puzzle-anim-36" id="2x13"></td>
-    <td row="2" col="14" class="puzzle-cell puzzle-anim-37 r" id="2x14"></td>
-    <td row="2" col="15" class="puzzle-cell puzzle-anim-38" id="2x15"></td>
-    <td row="2" col="16" class="puzzle-cell puzzle-anim-39" id="2x16"></td>
-    <td row="2" col="17" class="puzzle-cell puzzle-anim-40" id="2x17"></td>
-    <td row="2" col="18" class="puzzle-cell puzzle-anim-41" id="2x18"></td>
-    <td row="2" col="19" class="puzzle-cell puzzle-anim-42 r" id="2x19"></td>
-    <td row="2" col="20" class="puzzle-cell puzzle-anim-43" id="2x20"></td>
-    <td row="2" col="21" class="puzzle-cell puzzle-anim-44" id="2x21"></td>
-    <td row="2" col="22" class="puzzle-cell puzzle-anim-45" id="2x22"></td>
-    <td row="2" col="23" class="puzzle-cell puzzle-anim-46" id="2x23"></td>
-    <td row="2" col="24" class="puzzle-cell puzzle-anim-47" id="2x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">6 7 1</td>
-    <td row="3" col="0" class="puzzle-cell puzzle-anim-22" id="3x0"></td>
-    <td row="3" col="1" class="puzzle-cell puzzle-anim-23" id="3x1"></td>
-    <td row="3" col="2" class="puzzle-cell puzzle-anim-24" id="3x2"></td>
-    <td row="3" col="3" class="puzzle-cell puzzle-anim-25" id="3x3"></td>
-    <td row="3" col="4" class="puzzle-cell puzzle-anim-26 r" id="3x4"></td>
-    <td row="3" col="5" class="puzzle-cell puzzle-anim-27" id="3x5"></td>
-    <td row="3" col="6" class="puzzle-cell puzzle-anim-28" id="3x6"></td>
-    <td row="3" col="7" class="puzzle-cell puzzle-anim-29" id="3x7"></td>
-    <td row="3" col="8" class="puzzle-cell puzzle-anim-30" id="3x8"></td>
-    <td row="3" col="9" class="puzzle-cell puzzle-anim-31 r" id="3x9"></td>
-    <td row="3" col="10" class="puzzle-cell puzzle-anim-32" id="3x10"></td>
-    <td row="3" col="11" class="puzzle-cell puzzle-anim-33" id="3x11"></td>
-    <td row="3" col="12" class="puzzle-cell puzzle-anim-34" id="3x12"></td>
-    <td row="3" col="13" class="puzzle-cell puzzle-anim-35" id="3x13"></td>
-    <td row="3" col="14" class="puzzle-cell puzzle-anim-36 r" id="3x14"></td>
-    <td row="3" col="15" class="puzzle-cell puzzle-anim-37" id="3x15"></td>
-    <td row="3" col="16" class="puzzle-cell puzzle-anim-38" id="3x16"></td>
-    <td row="3" col="17" class="puzzle-cell puzzle-anim-39" id="3x17"></td>
-    <td row="3" col="18" class="puzzle-cell puzzle-anim-40" id="3x18"></td>
-    <td row="3" col="19" class="puzzle-cell puzzle-anim-41 r" id="3x19"></td>
-    <td row="3" col="20" class="puzzle-cell puzzle-anim-42" id="3x20"></td>
-    <td row="3" col="21" class="puzzle-cell puzzle-anim-43" id="3x21"></td>
-    <td row="3" col="22" class="puzzle-cell puzzle-anim-44" id="3x22"></td>
-    <td row="3" col="23" class="puzzle-cell puzzle-anim-45" id="3x23"></td>
-    <td row="3" col="24" class="puzzle-cell puzzle-anim-46" id="3x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr class="b">
-    <td class="left-numbers">4 2</td>
-    <td row="4" col="0" class="puzzle-cell puzzle-anim-21" id="4x0"></td>
-    <td row="4" col="1" class="puzzle-cell puzzle-anim-22" id="4x1"></td>
-    <td row="4" col="2" class="puzzle-cell puzzle-anim-23" id="4x2"></td>
-    <td row="4" col="3" class="puzzle-cell puzzle-anim-24" id="4x3"></td>
-    <td row="4" col="4" class="puzzle-cell puzzle-anim-25 r" id="4x4"></td>
-    <td row="4" col="5" class="puzzle-cell puzzle-anim-26" id="4x5"></td>
-    <td row="4" col="6" class="puzzle-cell puzzle-anim-27" id="4x6"></td>
-    <td row="4" col="7" class="puzzle-cell puzzle-anim-28" id="4x7"></td>
-    <td row="4" col="8" class="puzzle-cell puzzle-anim-29" id="4x8"></td>
-    <td row="4" col="9" class="puzzle-cell puzzle-anim-30 r" id="4x9"></td>
-    <td row="4" col="10" class="puzzle-cell puzzle-anim-31" id="4x10"></td>
-    <td row="4" col="11" class="puzzle-cell puzzle-anim-32" id="4x11"></td>
-    <td row="4" col="12" class="puzzle-cell puzzle-anim-33" id="4x12"></td>
-    <td row="4" col="13" class="puzzle-cell puzzle-anim-34" id="4x13"></td>
-    <td row="4" col="14" class="puzzle-cell puzzle-anim-35 r" id="4x14"></td>
-    <td row="4" col="15" class="puzzle-cell puzzle-anim-36" id="4x15"></td>
-    <td row="4" col="16" class="puzzle-cell puzzle-anim-37" id="4x16"></td>
-    <td row="4" col="17" class="puzzle-cell puzzle-anim-38" id="4x17"></td>
-    <td row="4" col="18" class="puzzle-cell puzzle-anim-39" id="4x18"></td>
-    <td row="4" col="19" class="puzzle-cell puzzle-anim-40 r" id="4x19"></td>
-    <td row="4" col="20" class="puzzle-cell puzzle-anim-41" id="4x20"></td>
-    <td row="4" col="21" class="puzzle-cell puzzle-anim-42" id="4x21"></td>
-    <td row="4" col="22" class="puzzle-cell puzzle-anim-43" id="4x22"></td>
-    <td row="4" col="23" class="puzzle-cell puzzle-anim-44" id="4x23"></td>
-    <td row="4" col="24" class="puzzle-cell puzzle-anim-45" id="4x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">8 3 4</td>
-    <td row="5" col="0" class="puzzle-cell puzzle-anim-20" id="5x0"></td>
-    <td row="5" col="1" class="puzzle-cell puzzle-anim-21" id="5x1"></td>
-    <td row="5" col="2" class="puzzle-cell puzzle-anim-22" id="5x2"></td>
-    <td row="5" col="3" class="puzzle-cell puzzle-anim-23" id="5x3"></td>
-    <td row="5" col="4" class="puzzle-cell puzzle-anim-24 r" id="5x4"></td>
-    <td row="5" col="5" class="puzzle-cell puzzle-anim-25" id="5x5"></td>
-    <td row="5" col="6" class="puzzle-cell puzzle-anim-26" id="5x6"></td>
-    <td row="5" col="7" class="puzzle-cell puzzle-anim-27" id="5x7"></td>
-    <td row="5" col="8" class="puzzle-cell puzzle-anim-28" id="5x8"></td>
-    <td row="5" col="9" class="puzzle-cell puzzle-anim-29 r" id="5x9"></td>
-    <td row="5" col="10" class="puzzle-cell puzzle-anim-30" id="5x10"></td>
-    <td row="5" col="11" class="puzzle-cell puzzle-anim-31" id="5x11"></td>
-    <td row="5" col="12" class="puzzle-cell puzzle-anim-32" id="5x12"></td>
-    <td row="5" col="13" class="puzzle-cell puzzle-anim-33" id="5x13"></td>
-    <td row="5" col="14" class="puzzle-cell puzzle-anim-34 r" id="5x14"></td>
-    <td row="5" col="15" class="puzzle-cell puzzle-anim-35" id="5x15"></td>
-    <td row="5" col="16" class="puzzle-cell puzzle-anim-36" id="5x16"></td>
-    <td row="5" col="17" class="puzzle-cell puzzle-anim-37" id="5x17"></td>
-    <td row="5" col="18" class="puzzle-cell puzzle-anim-38" id="5x18"></td>
-    <td row="5" col="19" class="puzzle-cell puzzle-anim-39 r" id="5x19"></td>
-    <td row="5" col="20" class="puzzle-cell puzzle-anim-40" id="5x20"></td>
-    <td row="5" col="21" class="puzzle-cell puzzle-anim-41" id="5x21"></td>
-    <td row="5" col="22" class="puzzle-cell puzzle-anim-42" id="5x22"></td>
-    <td row="5" col="23" class="puzzle-cell puzzle-anim-43" id="5x23"></td>
-    <td row="5" col="24" class="puzzle-cell puzzle-anim-44" id="5x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">3 3 9</td>
-    <td row="6" col="0" class="puzzle-cell puzzle-anim-19" id="6x0"></td>
-    <td row="6" col="1" class="puzzle-cell puzzle-anim-20" id="6x1"></td>
-    <td row="6" col="2" class="puzzle-cell puzzle-anim-21" id="6x2"></td>
-    <td row="6" col="3" class="puzzle-cell puzzle-anim-22" id="6x3"></td>
-    <td row="6" col="4" class="puzzle-cell puzzle-anim-23 r" id="6x4"></td>
-    <td row="6" col="5" class="puzzle-cell puzzle-anim-24" id="6x5"></td>
-    <td row="6" col="6" class="puzzle-cell puzzle-anim-25" id="6x6"></td>
-    <td row="6" col="7" class="puzzle-cell puzzle-anim-26" id="6x7"></td>
-    <td row="6" col="8" class="puzzle-cell puzzle-anim-27" id="6x8"></td>
-    <td row="6" col="9" class="puzzle-cell puzzle-anim-28 r" id="6x9"></td>
-    <td row="6" col="10" class="puzzle-cell puzzle-anim-29" id="6x10"></td>
-    <td row="6" col="11" class="puzzle-cell puzzle-anim-30" id="6x11"></td>
-    <td row="6" col="12" class="puzzle-cell puzzle-anim-31" id="6x12"></td>
-    <td row="6" col="13" class="puzzle-cell puzzle-anim-32" id="6x13"></td>
-    <td row="6" col="14" class="puzzle-cell puzzle-anim-33 r" id="6x14"></td>
-    <td row="6" col="15" class="puzzle-cell puzzle-anim-34" id="6x15"></td>
-    <td row="6" col="16" class="puzzle-cell puzzle-anim-35" id="6x16"></td>
-    <td row="6" col="17" class="puzzle-cell puzzle-anim-36" id="6x17"></td>
-    <td row="6" col="18" class="puzzle-cell puzzle-anim-37" id="6x18"></td>
-    <td row="6" col="19" class="puzzle-cell puzzle-anim-38 r" id="6x19"></td>
-    <td row="6" col="20" class="puzzle-cell puzzle-anim-39" id="6x20"></td>
-    <td row="6" col="21" class="puzzle-cell puzzle-anim-40" id="6x21"></td>
-    <td row="6" col="22" class="puzzle-cell puzzle-anim-41" id="6x22"></td>
-    <td row="6" col="23" class="puzzle-cell puzzle-anim-42" id="6x23"></td>
-    <td row="6" col="24" class="puzzle-cell puzzle-anim-43" id="6x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">4 6 5 2</td>
-    <td row="7" col="0" class="puzzle-cell puzzle-anim-18" id="7x0"></td>
-    <td row="7" col="1" class="puzzle-cell puzzle-anim-19" id="7x1"></td>
-    <td row="7" col="2" class="puzzle-cell puzzle-anim-20" id="7x2"></td>
-    <td row="7" col="3" class="puzzle-cell puzzle-anim-21" id="7x3"></td>
-    <td row="7" col="4" class="puzzle-cell puzzle-anim-22 r" id="7x4"></td>
-    <td row="7" col="5" class="puzzle-cell puzzle-anim-23" id="7x5"></td>
-    <td row="7" col="6" class="puzzle-cell puzzle-anim-24" id="7x6"></td>
-    <td row="7" col="7" class="puzzle-cell puzzle-anim-25" id="7x7"></td>
-    <td row="7" col="8" class="puzzle-cell puzzle-anim-26" id="7x8"></td>
-    <td row="7" col="9" class="puzzle-cell puzzle-anim-27 r" id="7x9"></td>
-    <td row="7" col="10" class="puzzle-cell puzzle-anim-28" id="7x10"></td>
-    <td row="7" col="11" class="puzzle-cell puzzle-anim-29" id="7x11"></td>
-    <td row="7" col="12" class="puzzle-cell puzzle-anim-30" id="7x12"></td>
-    <td row="7" col="13" class="puzzle-cell puzzle-anim-31" id="7x13"></td>
-    <td row="7" col="14" class="puzzle-cell puzzle-anim-32 r" id="7x14"></td>
-    <td row="7" col="15" class="puzzle-cell puzzle-anim-33" id="7x15"></td>
-    <td row="7" col="16" class="puzzle-cell puzzle-anim-34" id="7x16"></td>
-    <td row="7" col="17" class="puzzle-cell puzzle-anim-35" id="7x17"></td>
-    <td row="7" col="18" class="puzzle-cell puzzle-anim-36" id="7x18"></td>
-    <td row="7" col="19" class="puzzle-cell puzzle-anim-37 r" id="7x19"></td>
-    <td row="7" col="20" class="puzzle-cell puzzle-anim-38" id="7x20"></td>
-    <td row="7" col="21" class="puzzle-cell puzzle-anim-39" id="7x21"></td>
-    <td row="7" col="22" class="puzzle-cell puzzle-anim-40" id="7x22"></td>
-    <td row="7" col="23" class="puzzle-cell puzzle-anim-41" id="7x23"></td>
-    <td row="7" col="24" class="puzzle-cell puzzle-anim-42" id="7x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">3 1 8</td>
-    <td row="8" col="0" class="puzzle-cell puzzle-anim-17" id="8x0"></td>
-    <td row="8" col="1" class="puzzle-cell puzzle-anim-18" id="8x1"></td>
-    <td row="8" col="2" class="puzzle-cell puzzle-anim-19" id="8x2"></td>
-    <td row="8" col="3" class="puzzle-cell puzzle-anim-20" id="8x3"></td>
-    <td row="8" col="4" class="puzzle-cell puzzle-anim-21 r" id="8x4"></td>
-    <td row="8" col="5" class="puzzle-cell puzzle-anim-22" id="8x5"></td>
-    <td row="8" col="6" class="puzzle-cell puzzle-anim-23" id="8x6"></td>
-    <td row="8" col="7" class="puzzle-cell puzzle-anim-24" id="8x7"></td>
-    <td row="8" col="8" class="puzzle-cell puzzle-anim-25" id="8x8"></td>
-    <td row="8" col="9" class="puzzle-cell puzzle-anim-26 r" id="8x9"></td>
-    <td row="8" col="10" class="puzzle-cell puzzle-anim-27" id="8x10"></td>
-    <td row="8" col="11" class="puzzle-cell puzzle-anim-28" id="8x11"></td>
-    <td row="8" col="12" class="puzzle-cell puzzle-anim-29" id="8x12"></td>
-    <td row="8" col="13" class="puzzle-cell puzzle-anim-30" id="8x13"></td>
-    <td row="8" col="14" class="puzzle-cell puzzle-anim-31 r" id="8x14"></td>
-    <td row="8" col="15" class="puzzle-cell puzzle-anim-32" id="8x15"></td>
-    <td row="8" col="16" class="puzzle-cell puzzle-anim-33" id="8x16"></td>
-    <td row="8" col="17" class="puzzle-cell puzzle-anim-34" id="8x17"></td>
-    <td row="8" col="18" class="puzzle-cell puzzle-anim-35" id="8x18"></td>
-    <td row="8" col="19" class="puzzle-cell puzzle-anim-36 r" id="8x19"></td>
-    <td row="8" col="20" class="puzzle-cell puzzle-anim-37" id="8x20"></td>
-    <td row="8" col="21" class="puzzle-cell puzzle-anim-38" id="8x21"></td>
-    <td row="8" col="22" class="puzzle-cell puzzle-anim-39" id="8x22"></td>
-    <td row="8" col="23" class="puzzle-cell puzzle-anim-40" id="8x23"></td>
-    <td row="8" col="24" class="puzzle-cell puzzle-anim-41" id="8x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr class="b">
-    <td class="left-numbers">1</td>
-    <td row="9" col="0" class="puzzle-cell puzzle-anim-16" id="9x0"></td>
-    <td row="9" col="1" class="puzzle-cell puzzle-anim-17" id="9x1"></td>
-    <td row="9" col="2" class="puzzle-cell puzzle-anim-18" id="9x2"></td>
-    <td row="9" col="3" class="puzzle-cell puzzle-anim-19" id="9x3"></td>
-    <td row="9" col="4" class="puzzle-cell puzzle-anim-20 r" id="9x4"></td>
-    <td row="9" col="5" class="puzzle-cell puzzle-anim-21" id="9x5"></td>
-    <td row="9" col="6" class="puzzle-cell puzzle-anim-22" id="9x6"></td>
-    <td row="9" col="7" class="puzzle-cell puzzle-anim-23" id="9x7"></td>
-    <td row="9" col="8" class="puzzle-cell puzzle-anim-24" id="9x8"></td>
-    <td row="9" col="9" class="puzzle-cell puzzle-anim-25 r" id="9x9"></td>
-    <td row="9" col="10" class="puzzle-cell puzzle-anim-26" id="9x10"></td>
-    <td row="9" col="11" class="puzzle-cell puzzle-anim-27" id="9x11"></td>
-    <td row="9" col="12" class="puzzle-cell puzzle-anim-28" id="9x12"></td>
-    <td row="9" col="13" class="puzzle-cell puzzle-anim-29" id="9x13"></td>
-    <td row="9" col="14" class="puzzle-cell puzzle-anim-30 r" id="9x14"></td>
-    <td row="9" col="15" class="puzzle-cell puzzle-anim-31" id="9x15"></td>
-    <td row="9" col="16" class="puzzle-cell puzzle-anim-32" id="9x16"></td>
-    <td row="9" col="17" class="puzzle-cell puzzle-anim-33" id="9x17"></td>
-    <td row="9" col="18" class="puzzle-cell puzzle-anim-34" id="9x18"></td>
-    <td row="9" col="19" class="puzzle-cell puzzle-anim-35 r" id="9x19"></td>
-    <td row="9" col="20" class="puzzle-cell puzzle-anim-36" id="9x20"></td>
-    <td row="9" col="21" class="puzzle-cell puzzle-anim-37" id="9x21"></td>
-    <td row="9" col="22" class="puzzle-cell puzzle-anim-38" id="9x22"></td>
-    <td row="9" col="23" class="puzzle-cell puzzle-anim-39" id="9x23"></td>
-    <td row="9" col="24" class="puzzle-cell puzzle-anim-40" id="9x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">8 2</td>
-    <td row="10" col="0" class="puzzle-cell puzzle-anim-15" id="10x0"></td>
-    <td row="10" col="1" class="puzzle-cell puzzle-anim-16" id="10x1"></td>
-    <td row="10" col="2" class="puzzle-cell puzzle-anim-17" id="10x2"></td>
-    <td row="10" col="3" class="puzzle-cell puzzle-anim-18" id="10x3"></td>
-    <td row="10" col="4" class="puzzle-cell puzzle-anim-19 r" id="10x4"></td>
-    <td row="10" col="5" class="puzzle-cell puzzle-anim-20" id="10x5"></td>
-    <td row="10" col="6" class="puzzle-cell puzzle-anim-21" id="10x6"></td>
-    <td row="10" col="7" class="puzzle-cell puzzle-anim-22" id="10x7"></td>
-    <td row="10" col="8" class="puzzle-cell puzzle-anim-23" id="10x8"></td>
-    <td row="10" col="9" class="puzzle-cell puzzle-anim-24 r" id="10x9"></td>
-    <td row="10" col="10" class="puzzle-cell puzzle-anim-25" id="10x10"></td>
-    <td row="10" col="11" class="puzzle-cell puzzle-anim-26" id="10x11"></td>
-    <td row="10" col="12" class="puzzle-cell puzzle-anim-27" id="10x12"></td>
-    <td row="10" col="13" class="puzzle-cell puzzle-anim-28" id="10x13"></td>
-    <td row="10" col="14" class="puzzle-cell puzzle-anim-29 r" id="10x14"></td>
-    <td row="10" col="15" class="puzzle-cell puzzle-anim-30" id="10x15"></td>
-    <td row="10" col="16" class="puzzle-cell puzzle-anim-31" id="10x16"></td>
-    <td row="10" col="17" class="puzzle-cell puzzle-anim-32" id="10x17"></td>
-    <td row="10" col="18" class="puzzle-cell puzzle-anim-33" id="10x18"></td>
-    <td row="10" col="19" class="puzzle-cell puzzle-anim-34 r" id="10x19"></td>
-    <td row="10" col="20" class="puzzle-cell puzzle-anim-35" id="10x20"></td>
-    <td row="10" col="21" class="puzzle-cell puzzle-anim-36" id="10x21"></td>
-    <td row="10" col="22" class="puzzle-cell puzzle-anim-37" id="10x22"></td>
-    <td row="10" col="23" class="puzzle-cell puzzle-anim-38" id="10x23"></td>
-    <td row="10" col="24" class="puzzle-cell puzzle-anim-39" id="10x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">2 7 1</td>
-    <td row="11" col="0" class="puzzle-cell puzzle-anim-14" id="11x0"></td>
-    <td row="11" col="1" class="puzzle-cell puzzle-anim-15" id="11x1"></td>
-    <td row="11" col="2" class="puzzle-cell puzzle-anim-16" id="11x2"></td>
-    <td row="11" col="3" class="puzzle-cell puzzle-anim-17" id="11x3"></td>
-    <td row="11" col="4" class="puzzle-cell puzzle-anim-18 r" id="11x4"></td>
-    <td row="11" col="5" class="puzzle-cell puzzle-anim-19" id="11x5"></td>
-    <td row="11" col="6" class="puzzle-cell puzzle-anim-20" id="11x6"></td>
-    <td row="11" col="7" class="puzzle-cell puzzle-anim-21" id="11x7"></td>
-    <td row="11" col="8" class="puzzle-cell puzzle-anim-22" id="11x8"></td>
-    <td row="11" col="9" class="puzzle-cell puzzle-anim-23 r" id="11x9"></td>
-    <td row="11" col="10" class="puzzle-cell puzzle-anim-24" id="11x10"></td>
-    <td row="11" col="11" class="puzzle-cell puzzle-anim-25" id="11x11"></td>
-    <td row="11" col="12" class="puzzle-cell puzzle-anim-26" id="11x12"></td>
-    <td row="11" col="13" class="puzzle-cell puzzle-anim-27" id="11x13"></td>
-    <td row="11" col="14" class="puzzle-cell puzzle-anim-28 r" id="11x14"></td>
-    <td row="11" col="15" class="puzzle-cell puzzle-anim-29" id="11x15"></td>
-    <td row="11" col="16" class="puzzle-cell puzzle-anim-30" id="11x16"></td>
-    <td row="11" col="17" class="puzzle-cell puzzle-anim-31" id="11x17"></td>
-    <td row="11" col="18" class="puzzle-cell puzzle-anim-32" id="11x18"></td>
-    <td row="11" col="19" class="puzzle-cell puzzle-anim-33 r" id="11x19"></td>
-    <td row="11" col="20" class="puzzle-cell puzzle-anim-34" id="11x20"></td>
-    <td row="11" col="21" class="puzzle-cell puzzle-anim-35" id="11x21"></td>
-    <td row="11" col="22" class="puzzle-cell puzzle-anim-36" id="11x22"></td>
-    <td row="11" col="23" class="puzzle-cell puzzle-anim-37" id="11x23"></td>
-    <td row="11" col="24" class="puzzle-cell puzzle-anim-38" id="11x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">5 1 2 5</td>
-    <td row="12" col="0" class="puzzle-cell puzzle-anim-13" id="12x0"></td>
-    <td row="12" col="1" class="puzzle-cell puzzle-anim-14" id="12x1"></td>
-    <td row="12" col="2" class="puzzle-cell puzzle-anim-15" id="12x2"></td>
-    <td row="12" col="3" class="puzzle-cell puzzle-anim-16" id="12x3"></td>
-    <td row="12" col="4" class="puzzle-cell puzzle-anim-17 r" id="12x4"></td>
-    <td row="12" col="5" class="puzzle-cell puzzle-anim-18" id="12x5"></td>
-    <td row="12" col="6" class="puzzle-cell puzzle-anim-19" id="12x6"></td>
-    <td row="12" col="7" class="puzzle-cell puzzle-anim-20" id="12x7"></td>
-    <td row="12" col="8" class="puzzle-cell puzzle-anim-21" id="12x8"></td>
-    <td row="12" col="9" class="puzzle-cell puzzle-anim-22 r" id="12x9"></td>
-    <td row="12" col="10" class="puzzle-cell puzzle-anim-23" id="12x10"></td>
-    <td row="12" col="11" class="puzzle-cell puzzle-anim-24" id="12x11"></td>
-    <td row="12" col="12" class="puzzle-cell puzzle-anim-25" id="12x12"></td>
-    <td row="12" col="13" class="puzzle-cell puzzle-anim-26" id="12x13"></td>
-    <td row="12" col="14" class="puzzle-cell puzzle-anim-27 r" id="12x14"></td>
-    <td row="12" col="15" class="puzzle-cell puzzle-anim-28" id="12x15"></td>
-    <td row="12" col="16" class="puzzle-cell puzzle-anim-29" id="12x16"></td>
-    <td row="12" col="17" class="puzzle-cell puzzle-anim-30" id="12x17"></td>
-    <td row="12" col="18" class="puzzle-cell puzzle-anim-31" id="12x18"></td>
-    <td row="12" col="19" class="puzzle-cell puzzle-anim-32 r" id="12x19"></td>
-    <td row="12" col="20" class="puzzle-cell puzzle-anim-33" id="12x20"></td>
-    <td row="12" col="21" class="puzzle-cell puzzle-anim-34" id="12x21"></td>
-    <td row="12" col="22" class="puzzle-cell puzzle-anim-35" id="12x22"></td>
-    <td row="12" col="23" class="puzzle-cell puzzle-anim-36" id="12x23"></td>
-    <td row="12" col="24" class="puzzle-cell puzzle-anim-37" id="12x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">4 2 7</td>
-    <td row="13" col="0" class="puzzle-cell puzzle-anim-12" id="13x0"></td>
-    <td row="13" col="1" class="puzzle-cell puzzle-anim-13" id="13x1"></td>
-    <td row="13" col="2" class="puzzle-cell puzzle-anim-14" id="13x2"></td>
-    <td row="13" col="3" class="puzzle-cell puzzle-anim-15" id="13x3"></td>
-    <td row="13" col="4" class="puzzle-cell puzzle-anim-16 r" id="13x4"></td>
-    <td row="13" col="5" class="puzzle-cell puzzle-anim-17" id="13x5"></td>
-    <td row="13" col="6" class="puzzle-cell puzzle-anim-18" id="13x6"></td>
-    <td row="13" col="7" class="puzzle-cell puzzle-anim-19" id="13x7"></td>
-    <td row="13" col="8" class="puzzle-cell puzzle-anim-20" id="13x8"></td>
-    <td row="13" col="9" class="puzzle-cell puzzle-anim-21 r" id="13x9"></td>
-    <td row="13" col="10" class="puzzle-cell puzzle-anim-22" id="13x10"></td>
-    <td row="13" col="11" class="puzzle-cell puzzle-anim-23" id="13x11"></td>
-    <td row="13" col="12" class="puzzle-cell puzzle-anim-24" id="13x12"></td>
-    <td row="13" col="13" class="puzzle-cell puzzle-anim-25" id="13x13"></td>
-    <td row="13" col="14" class="puzzle-cell puzzle-anim-26 r" id="13x14"></td>
-    <td row="13" col="15" class="puzzle-cell puzzle-anim-27" id="13x15"></td>
-    <td row="13" col="16" class="puzzle-cell puzzle-anim-28" id="13x16"></td>
-    <td row="13" col="17" class="puzzle-cell puzzle-anim-29" id="13x17"></td>
-    <td row="13" col="18" class="puzzle-cell puzzle-anim-30" id="13x18"></td>
-    <td row="13" col="19" class="puzzle-cell puzzle-anim-31 r" id="13x19"></td>
-    <td row="13" col="20" class="puzzle-cell puzzle-anim-32" id="13x20"></td>
-    <td row="13" col="21" class="puzzle-cell puzzle-anim-33" id="13x21"></td>
-    <td row="13" col="22" class="puzzle-cell puzzle-anim-34" id="13x22"></td>
-    <td row="13" col="23" class="puzzle-cell puzzle-anim-35" id="13x23"></td>
-    <td row="13" col="24" class="puzzle-cell puzzle-anim-36" id="13x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr class="b">
-    <td class="left-numbers">3</td>
-    <td row="14" col="0" class="puzzle-cell puzzle-anim-11" id="14x0"></td>
-    <td row="14" col="1" class="puzzle-cell puzzle-anim-12" id="14x1"></td>
-    <td row="14" col="2" class="puzzle-cell puzzle-anim-13" id="14x2"></td>
-    <td row="14" col="3" class="puzzle-cell puzzle-anim-14" id="14x3"></td>
-    <td row="14" col="4" class="puzzle-cell puzzle-anim-15 r" id="14x4"></td>
-    <td row="14" col="5" class="puzzle-cell puzzle-anim-16" id="14x5"></td>
-    <td row="14" col="6" class="puzzle-cell puzzle-anim-17" id="14x6"></td>
-    <td row="14" col="7" class="puzzle-cell puzzle-anim-18" id="14x7"></td>
-    <td row="14" col="8" class="puzzle-cell puzzle-anim-19" id="14x8"></td>
-    <td row="14" col="9" class="puzzle-cell puzzle-anim-20 r" id="14x9"></td>
-    <td row="14" col="10" class="puzzle-cell puzzle-anim-21" id="14x10"></td>
-    <td row="14" col="11" class="puzzle-cell puzzle-anim-22" id="14x11"></td>
-    <td row="14" col="12" class="puzzle-cell puzzle-anim-23" id="14x12"></td>
-    <td row="14" col="13" class="puzzle-cell puzzle-anim-24" id="14x13"></td>
-    <td row="14" col="14" class="puzzle-cell puzzle-anim-25 r" id="14x14"></td>
-    <td row="14" col="15" class="puzzle-cell puzzle-anim-26" id="14x15"></td>
-    <td row="14" col="16" class="puzzle-cell puzzle-anim-27" id="14x16"></td>
-    <td row="14" col="17" class="puzzle-cell puzzle-anim-28" id="14x17"></td>
-    <td row="14" col="18" class="puzzle-cell puzzle-anim-29" id="14x18"></td>
-    <td row="14" col="19" class="puzzle-cell puzzle-anim-30 r" id="14x19"></td>
-    <td row="14" col="20" class="puzzle-cell puzzle-anim-31" id="14x20"></td>
-    <td row="14" col="21" class="puzzle-cell puzzle-anim-32" id="14x21"></td>
-    <td row="14" col="22" class="puzzle-cell puzzle-anim-33" id="14x22"></td>
-    <td row="14" col="23" class="puzzle-cell puzzle-anim-34" id="14x23"></td>
-    <td row="14" col="24" class="puzzle-cell puzzle-anim-35" id="14x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">1 4 2 1</td>
-    <td row="15" col="0" class="puzzle-cell puzzle-anim-10" id="15x0"></td>
-    <td row="15" col="1" class="puzzle-cell puzzle-anim-11" id="15x1"></td>
-    <td row="15" col="2" class="puzzle-cell puzzle-anim-12" id="15x2"></td>
-    <td row="15" col="3" class="puzzle-cell puzzle-anim-13" id="15x3"></td>
-    <td row="15" col="4" class="puzzle-cell puzzle-anim-14 r" id="15x4"></td>
-    <td row="15" col="5" class="puzzle-cell puzzle-anim-15" id="15x5"></td>
-    <td row="15" col="6" class="puzzle-cell puzzle-anim-16" id="15x6"></td>
-    <td row="15" col="7" class="puzzle-cell puzzle-anim-17" id="15x7"></td>
-    <td row="15" col="8" class="puzzle-cell puzzle-anim-18" id="15x8"></td>
-    <td row="15" col="9" class="puzzle-cell puzzle-anim-19 r" id="15x9"></td>
-    <td row="15" col="10" class="puzzle-cell puzzle-anim-20" id="15x10"></td>
-    <td row="15" col="11" class="puzzle-cell puzzle-anim-21" id="15x11"></td>
-    <td row="15" col="12" class="puzzle-cell puzzle-anim-22" id="15x12"></td>
-    <td row="15" col="13" class="puzzle-cell puzzle-anim-23" id="15x13"></td>
-    <td row="15" col="14" class="puzzle-cell puzzle-anim-24 r" id="15x14"></td>
-    <td row="15" col="15" class="puzzle-cell puzzle-anim-25" id="15x15"></td>
-    <td row="15" col="16" class="puzzle-cell puzzle-anim-26" id="15x16"></td>
-    <td row="15" col="17" class="puzzle-cell puzzle-anim-27" id="15x17"></td>
-    <td row="15" col="18" class="puzzle-cell puzzle-anim-28" id="15x18"></td>
-    <td row="15" col="19" class="puzzle-cell puzzle-anim-29 r" id="15x19"></td>
-    <td row="15" col="20" class="puzzle-cell puzzle-anim-30" id="15x20"></td>
-    <td row="15" col="21" class="puzzle-cell puzzle-anim-31" id="15x21"></td>
-    <td row="15" col="22" class="puzzle-cell puzzle-anim-32" id="15x22"></td>
-    <td row="15" col="23" class="puzzle-cell puzzle-anim-33" id="15x23"></td>
-    <td row="15" col="24" class="puzzle-cell puzzle-anim-34" id="15x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">3 8 3</td>
-    <td row="16" col="0" class="puzzle-cell puzzle-anim-9" id="16x0"></td>
-    <td row="16" col="1" class="puzzle-cell puzzle-anim-10" id="16x1"></td>
-    <td row="16" col="2" class="puzzle-cell puzzle-anim-11" id="16x2"></td>
-    <td row="16" col="3" class="puzzle-cell puzzle-anim-12" id="16x3"></td>
-    <td row="16" col="4" class="puzzle-cell puzzle-anim-13 r" id="16x4"></td>
-    <td row="16" col="5" class="puzzle-cell puzzle-anim-14" id="16x5"></td>
-    <td row="16" col="6" class="puzzle-cell puzzle-anim-15" id="16x6"></td>
-    <td row="16" col="7" class="puzzle-cell puzzle-anim-16" id="16x7"></td>
-    <td row="16" col="8" class="puzzle-cell puzzle-anim-17" id="16x8"></td>
-    <td row="16" col="9" class="puzzle-cell puzzle-anim-18 r" id="16x9"></td>
-    <td row="16" col="10" class="puzzle-cell puzzle-anim-19" id="16x10"></td>
-    <td row="16" col="11" class="puzzle-cell puzzle-anim-20" id="16x11"></td>
-    <td row="16" col="12" class="puzzle-cell puzzle-anim-21" id="16x12"></td>
-    <td row="16" col="13" class="puzzle-cell puzzle-anim-22" id="16x13"></td>
-    <td row="16" col="14" class="puzzle-cell puzzle-anim-23 r" id="16x14"></td>
-    <td row="16" col="15" class="puzzle-cell puzzle-anim-24" id="16x15"></td>
-    <td row="16" col="16" class="puzzle-cell puzzle-anim-25" id="16x16"></td>
-    <td row="16" col="17" class="puzzle-cell puzzle-anim-26" id="16x17"></td>
-    <td row="16" col="18" class="puzzle-cell puzzle-anim-27" id="16x18"></td>
-    <td row="16" col="19" class="puzzle-cell puzzle-anim-28 r" id="16x19"></td>
-    <td row="16" col="20" class="puzzle-cell puzzle-anim-29" id="16x20"></td>
-    <td row="16" col="21" class="puzzle-cell puzzle-anim-30" id="16x21"></td>
-    <td row="16" col="22" class="puzzle-cell puzzle-anim-31" id="16x22"></td>
-    <td row="16" col="23" class="puzzle-cell puzzle-anim-32" id="16x23"></td>
-    <td row="16" col="24" class="puzzle-cell puzzle-anim-33" id="16x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">8 4</td>
-    <td row="17" col="0" class="puzzle-cell puzzle-anim-8" id="17x0"></td>
-    <td row="17" col="1" class="puzzle-cell puzzle-anim-9" id="17x1"></td>
-    <td row="17" col="2" class="puzzle-cell puzzle-anim-10" id="17x2"></td>
-    <td row="17" col="3" class="puzzle-cell puzzle-anim-11" id="17x3"></td>
-    <td row="17" col="4" class="puzzle-cell puzzle-anim-12 r" id="17x4"></td>
-    <td row="17" col="5" class="puzzle-cell puzzle-anim-13" id="17x5"></td>
-    <td row="17" col="6" class="puzzle-cell puzzle-anim-14" id="17x6"></td>
-    <td row="17" col="7" class="puzzle-cell puzzle-anim-15" id="17x7"></td>
-    <td row="17" col="8" class="puzzle-cell puzzle-anim-16" id="17x8"></td>
-    <td row="17" col="9" class="puzzle-cell puzzle-anim-17 r" id="17x9"></td>
-    <td row="17" col="10" class="puzzle-cell puzzle-anim-18" id="17x10"></td>
-    <td row="17" col="11" class="puzzle-cell puzzle-anim-19" id="17x11"></td>
-    <td row="17" col="12" class="puzzle-cell puzzle-anim-20" id="17x12"></td>
-    <td row="17" col="13" class="puzzle-cell puzzle-anim-21" id="17x13"></td>
-    <td row="17" col="14" class="puzzle-cell puzzle-anim-22 r" id="17x14"></td>
-    <td row="17" col="15" class="puzzle-cell puzzle-anim-23" id="17x15"></td>
-    <td row="17" col="16" class="puzzle-cell puzzle-anim-24" id="17x16"></td>
-    <td row="17" col="17" class="puzzle-cell puzzle-anim-25" id="17x17"></td>
-    <td row="17" col="18" class="puzzle-cell puzzle-anim-26" id="17x18"></td>
-    <td row="17" col="19" class="puzzle-cell puzzle-anim-27 r" id="17x19"></td>
-    <td row="17" col="20" class="puzzle-cell puzzle-anim-28" id="17x20"></td>
-    <td row="17" col="21" class="puzzle-cell puzzle-anim-29" id="17x21"></td>
-    <td row="17" col="22" class="puzzle-cell puzzle-anim-30" id="17x22"></td>
-    <td row="17" col="23" class="puzzle-cell puzzle-anim-31" id="17x23"></td>
-    <td row="17" col="24" class="puzzle-cell puzzle-anim-32" id="17x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">8 8</td>
-    <td row="18" col="0" class="puzzle-cell puzzle-anim-7" id="18x0"></td>
-    <td row="18" col="1" class="puzzle-cell puzzle-anim-8" id="18x1"></td>
-    <td row="18" col="2" class="puzzle-cell puzzle-anim-9" id="18x2"></td>
-    <td row="18" col="3" class="puzzle-cell puzzle-anim-10" id="18x3"></td>
-    <td row="18" col="4" class="puzzle-cell puzzle-anim-11 r" id="18x4"></td>
-    <td row="18" col="5" class="puzzle-cell puzzle-anim-12" id="18x5"></td>
-    <td row="18" col="6" class="puzzle-cell puzzle-anim-13" id="18x6"></td>
-    <td row="18" col="7" class="puzzle-cell puzzle-anim-14" id="18x7"></td>
-    <td row="18" col="8" class="puzzle-cell puzzle-anim-15" id="18x8"></td>
-    <td row="18" col="9" class="puzzle-cell puzzle-anim-16 r" id="18x9"></td>
-    <td row="18" col="10" class="puzzle-cell puzzle-anim-17" id="18x10"></td>
-    <td row="18" col="11" class="puzzle-cell puzzle-anim-18" id="18x11"></td>
-    <td row="18" col="12" class="puzzle-cell puzzle-anim-19" id="18x12"></td>
-    <td row="18" col="13" class="puzzle-cell puzzle-anim-20" id="18x13"></td>
-    <td row="18" col="14" class="puzzle-cell puzzle-anim-21 r" id="18x14"></td>
-    <td row="18" col="15" class="puzzle-cell puzzle-anim-22" id="18x15"></td>
-    <td row="18" col="16" class="puzzle-cell puzzle-anim-23" id="18x16"></td>
-    <td row="18" col="17" class="puzzle-cell puzzle-anim-24" id="18x17"></td>
-    <td row="18" col="18" class="puzzle-cell puzzle-anim-25" id="18x18"></td>
-    <td row="18" col="19" class="puzzle-cell puzzle-anim-26 r" id="18x19"></td>
-    <td row="18" col="20" class="puzzle-cell puzzle-anim-27" id="18x20"></td>
-    <td row="18" col="21" class="puzzle-cell puzzle-anim-28" id="18x21"></td>
-    <td row="18" col="22" class="puzzle-cell puzzle-anim-29" id="18x22"></td>
-    <td row="18" col="23" class="puzzle-cell puzzle-anim-30" id="18x23"></td>
-    <td row="18" col="24" class="puzzle-cell puzzle-anim-31" id="18x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr class="b">
-    <td class="left-numbers">16 7</td>
-    <td row="19" col="0" class="puzzle-cell puzzle-anim-6" id="19x0"></td>
-    <td row="19" col="1" class="puzzle-cell puzzle-anim-7" id="19x1"></td>
-    <td row="19" col="2" class="puzzle-cell puzzle-anim-8" id="19x2"></td>
-    <td row="19" col="3" class="puzzle-cell puzzle-anim-9" id="19x3"></td>
-    <td row="19" col="4" class="puzzle-cell puzzle-anim-10 r" id="19x4"></td>
-    <td row="19" col="5" class="puzzle-cell puzzle-anim-11" id="19x5"></td>
-    <td row="19" col="6" class="puzzle-cell puzzle-anim-12" id="19x6"></td>
-    <td row="19" col="7" class="puzzle-cell puzzle-anim-13" id="19x7"></td>
-    <td row="19" col="8" class="puzzle-cell puzzle-anim-14" id="19x8"></td>
-    <td row="19" col="9" class="puzzle-cell puzzle-anim-15 r" id="19x9"></td>
-    <td row="19" col="10" class="puzzle-cell puzzle-anim-16" id="19x10"></td>
-    <td row="19" col="11" class="puzzle-cell puzzle-anim-17" id="19x11"></td>
-    <td row="19" col="12" class="puzzle-cell puzzle-anim-18" id="19x12"></td>
-    <td row="19" col="13" class="puzzle-cell puzzle-anim-19" id="19x13"></td>
-    <td row="19" col="14" class="puzzle-cell puzzle-anim-20 r" id="19x14"></td>
-    <td row="19" col="15" class="puzzle-cell puzzle-anim-21" id="19x15"></td>
-    <td row="19" col="16" class="puzzle-cell puzzle-anim-22" id="19x16"></td>
-    <td row="19" col="17" class="puzzle-cell puzzle-anim-23" id="19x17"></td>
-    <td row="19" col="18" class="puzzle-cell puzzle-anim-24" id="19x18"></td>
-    <td row="19" col="19" class="puzzle-cell puzzle-anim-25 r" id="19x19"></td>
-    <td row="19" col="20" class="puzzle-cell puzzle-anim-26" id="19x20"></td>
-    <td row="19" col="21" class="puzzle-cell puzzle-anim-27" id="19x21"></td>
-    <td row="19" col="22" class="puzzle-cell puzzle-anim-28" id="19x22"></td>
-    <td row="19" col="23" class="puzzle-cell puzzle-anim-29" id="19x23"></td>
-    <td row="19" col="24" class="puzzle-cell puzzle-anim-30" id="19x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">3 1</td>
-    <td row="20" col="0" class="puzzle-cell puzzle-anim-5" id="20x0"></td>
-    <td row="20" col="1" class="puzzle-cell puzzle-anim-6" id="20x1"></td>
-    <td row="20" col="2" class="puzzle-cell puzzle-anim-7" id="20x2"></td>
-    <td row="20" col="3" class="puzzle-cell puzzle-anim-8" id="20x3"></td>
-    <td row="20" col="4" class="puzzle-cell puzzle-anim-9 r" id="20x4"></td>
-    <td row="20" col="5" class="puzzle-cell puzzle-anim-10" id="20x5"></td>
-    <td row="20" col="6" class="puzzle-cell puzzle-anim-11" id="20x6"></td>
-    <td row="20" col="7" class="puzzle-cell puzzle-anim-12" id="20x7"></td>
-    <td row="20" col="8" class="puzzle-cell puzzle-anim-13" id="20x8"></td>
-    <td row="20" col="9" class="puzzle-cell puzzle-anim-14 r" id="20x9"></td>
-    <td row="20" col="10" class="puzzle-cell puzzle-anim-15" id="20x10"></td>
-    <td row="20" col="11" class="puzzle-cell puzzle-anim-16" id="20x11"></td>
-    <td row="20" col="12" class="puzzle-cell puzzle-anim-17" id="20x12"></td>
-    <td row="20" col="13" class="puzzle-cell puzzle-anim-18" id="20x13"></td>
-    <td row="20" col="14" class="puzzle-cell puzzle-anim-19 r" id="20x14"></td>
-    <td row="20" col="15" class="puzzle-cell puzzle-anim-20" id="20x15"></td>
-    <td row="20" col="16" class="puzzle-cell puzzle-anim-21" id="20x16"></td>
-    <td row="20" col="17" class="puzzle-cell puzzle-anim-22" id="20x17"></td>
-    <td row="20" col="18" class="puzzle-cell puzzle-anim-23" id="20x18"></td>
-    <td row="20" col="19" class="puzzle-cell puzzle-anim-24 r" id="20x19"></td>
-    <td row="20" col="20" class="puzzle-cell puzzle-anim-25" id="20x20"></td>
-    <td row="20" col="21" class="puzzle-cell puzzle-anim-26" id="20x21"></td>
-    <td row="20" col="22" class="puzzle-cell puzzle-anim-27" id="20x22"></td>
-    <td row="20" col="23" class="puzzle-cell puzzle-anim-28" id="20x23"></td>
-    <td row="20" col="24" class="puzzle-cell puzzle-anim-29" id="20x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">25</td>
-    <td row="21" col="0" class="puzzle-cell puzzle-anim-4" id="21x0"></td>
-    <td row="21" col="1" class="puzzle-cell puzzle-anim-5" id="21x1"></td>
-    <td row="21" col="2" class="puzzle-cell puzzle-anim-6" id="21x2"></td>
-    <td row="21" col="3" class="puzzle-cell puzzle-anim-7" id="21x3"></td>
-    <td row="21" col="4" class="puzzle-cell puzzle-anim-8 r" id="21x4"></td>
-    <td row="21" col="5" class="puzzle-cell puzzle-anim-9" id="21x5"></td>
-    <td row="21" col="6" class="puzzle-cell puzzle-anim-10" id="21x6"></td>
-    <td row="21" col="7" class="puzzle-cell puzzle-anim-11" id="21x7"></td>
-    <td row="21" col="8" class="puzzle-cell puzzle-anim-12" id="21x8"></td>
-    <td row="21" col="9" class="puzzle-cell puzzle-anim-13 r" id="21x9"></td>
-    <td row="21" col="10" class="puzzle-cell puzzle-anim-14" id="21x10"></td>
-    <td row="21" col="11" class="puzzle-cell puzzle-anim-15" id="21x11"></td>
-    <td row="21" col="12" class="puzzle-cell puzzle-anim-16" id="21x12"></td>
-    <td row="21" col="13" class="puzzle-cell puzzle-anim-17" id="21x13"></td>
-    <td row="21" col="14" class="puzzle-cell puzzle-anim-18 r" id="21x14"></td>
-    <td row="21" col="15" class="puzzle-cell puzzle-anim-19" id="21x15"></td>
-    <td row="21" col="16" class="puzzle-cell puzzle-anim-20" id="21x16"></td>
-    <td row="21" col="17" class="puzzle-cell puzzle-anim-21" id="21x17"></td>
-    <td row="21" col="18" class="puzzle-cell puzzle-anim-22" id="21x18"></td>
-    <td row="21" col="19" class="puzzle-cell puzzle-anim-23 r" id="21x19"></td>
-    <td row="21" col="20" class="puzzle-cell puzzle-anim-24" id="21x20"></td>
-    <td row="21" col="21" class="puzzle-cell puzzle-anim-25" id="21x21"></td>
-    <td row="21" col="22" class="puzzle-cell puzzle-anim-26" id="21x22"></td>
-    <td row="21" col="23" class="puzzle-cell puzzle-anim-27" id="21x23"></td>
-    <td row="21" col="24" class="puzzle-cell puzzle-anim-28" id="21x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">1 13 1</td>
-    <td row="22" col="0" class="puzzle-cell puzzle-anim-3" id="22x0"></td>
-    <td row="22" col="1" class="puzzle-cell puzzle-anim-4" id="22x1"></td>
-    <td row="22" col="2" class="puzzle-cell puzzle-anim-5" id="22x2"></td>
-    <td row="22" col="3" class="puzzle-cell puzzle-anim-6" id="22x3"></td>
-    <td row="22" col="4" class="puzzle-cell puzzle-anim-7 r" id="22x4"></td>
-    <td row="22" col="5" class="puzzle-cell puzzle-anim-8" id="22x5"></td>
-    <td row="22" col="6" class="puzzle-cell puzzle-anim-9" id="22x6"></td>
-    <td row="22" col="7" class="puzzle-cell puzzle-anim-10" id="22x7"></td>
-    <td row="22" col="8" class="puzzle-cell puzzle-anim-11" id="22x8"></td>
-    <td row="22" col="9" class="puzzle-cell puzzle-anim-12 r" id="22x9"></td>
-    <td row="22" col="10" class="puzzle-cell puzzle-anim-13" id="22x10"></td>
-    <td row="22" col="11" class="puzzle-cell puzzle-anim-14" id="22x11"></td>
-    <td row="22" col="12" class="puzzle-cell puzzle-anim-15" id="22x12"></td>
-    <td row="22" col="13" class="puzzle-cell puzzle-anim-16" id="22x13"></td>
-    <td row="22" col="14" class="puzzle-cell puzzle-anim-17 r" id="22x14"></td>
-    <td row="22" col="15" class="puzzle-cell puzzle-anim-18" id="22x15"></td>
-    <td row="22" col="16" class="puzzle-cell puzzle-anim-19" id="22x16"></td>
-    <td row="22" col="17" class="puzzle-cell puzzle-anim-20" id="22x17"></td>
-    <td row="22" col="18" class="puzzle-cell puzzle-anim-21" id="22x18"></td>
-    <td row="22" col="19" class="puzzle-cell puzzle-anim-22 r" id="22x19"></td>
-    <td row="22" col="20" class="puzzle-cell puzzle-anim-23" id="22x20"></td>
-    <td row="22" col="21" class="puzzle-cell puzzle-anim-24" id="22x21"></td>
-    <td row="22" col="22" class="puzzle-cell puzzle-anim-25" id="22x22"></td>
-    <td row="22" col="23" class="puzzle-cell puzzle-anim-26" id="22x23"></td>
-    <td row="22" col="24" class="puzzle-cell puzzle-anim-27" id="22x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">6 12</td>
-    <td row="23" col="0" class="puzzle-cell puzzle-anim-2" id="23x0"></td>
-    <td row="23" col="1" class="puzzle-cell puzzle-anim-3" id="23x1"></td>
-    <td row="23" col="2" class="puzzle-cell puzzle-anim-4" id="23x2"></td>
-    <td row="23" col="3" class="puzzle-cell puzzle-anim-5" id="23x3"></td>
-    <td row="23" col="4" class="puzzle-cell puzzle-anim-6 r" id="23x4"></td>
-    <td row="23" col="5" class="puzzle-cell puzzle-anim-7" id="23x5"></td>
-    <td row="23" col="6" class="puzzle-cell puzzle-anim-8" id="23x6"></td>
-    <td row="23" col="7" class="puzzle-cell puzzle-anim-9" id="23x7"></td>
-    <td row="23" col="8" class="puzzle-cell puzzle-anim-10" id="23x8"></td>
-    <td row="23" col="9" class="puzzle-cell puzzle-anim-11 r" id="23x9"></td>
-    <td row="23" col="10" class="puzzle-cell puzzle-anim-12" id="23x10"></td>
-    <td row="23" col="11" class="puzzle-cell puzzle-anim-13" id="23x11"></td>
-    <td row="23" col="12" class="puzzle-cell puzzle-anim-14" id="23x12"></td>
-    <td row="23" col="13" class="puzzle-cell puzzle-anim-15" id="23x13"></td>
-    <td row="23" col="14" class="puzzle-cell puzzle-anim-16 r" id="23x14"></td>
-    <td row="23" col="15" class="puzzle-cell puzzle-anim-17" id="23x15"></td>
-    <td row="23" col="16" class="puzzle-cell puzzle-anim-18" id="23x16"></td>
-    <td row="23" col="17" class="puzzle-cell puzzle-anim-19" id="23x17"></td>
-    <td row="23" col="18" class="puzzle-cell puzzle-anim-20" id="23x18"></td>
-    <td row="23" col="19" class="puzzle-cell puzzle-anim-21 r" id="23x19"></td>
-    <td row="23" col="20" class="puzzle-cell puzzle-anim-22" id="23x20"></td>
-    <td row="23" col="21" class="puzzle-cell puzzle-anim-23" id="23x21"></td>
-    <td row="23" col="22" class="puzzle-cell puzzle-anim-24" id="23x22"></td>
-    <td row="23" col="23" class="puzzle-cell puzzle-anim-25" id="23x23"></td>
-    <td row="23" col="24" class="puzzle-cell puzzle-anim-26" id="23x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="left-numbers">9</td>
-    <td row="24" col="0" class="puzzle-cell puzzle-anim-1" id="24x0"></td>
-    <td row="24" col="1" class="puzzle-cell puzzle-anim-2" id="24x1"></td>
-    <td row="24" col="2" class="puzzle-cell puzzle-anim-3" id="24x2"></td>
-    <td row="24" col="3" class="puzzle-cell puzzle-anim-4" id="24x3"></td>
-    <td row="24" col="4" class="puzzle-cell puzzle-anim-5 r" id="24x4"></td>
-    <td row="24" col="5" class="puzzle-cell puzzle-anim-6" id="24x5"></td>
-    <td row="24" col="6" class="puzzle-cell puzzle-anim-7" id="24x6"></td>
-    <td row="24" col="7" class="puzzle-cell puzzle-anim-8" id="24x7"></td>
-    <td row="24" col="8" class="puzzle-cell puzzle-anim-9" id="24x8"></td>
-    <td row="24" col="9" class="puzzle-cell puzzle-anim-10 r" id="24x9"></td>
-    <td row="24" col="10" class="puzzle-cell puzzle-anim-11" id="24x10"></td>
-    <td row="24" col="11" class="puzzle-cell puzzle-anim-12" id="24x11"></td>
-    <td row="24" col="12" class="puzzle-cell puzzle-anim-13" id="24x12"></td>
-    <td row="24" col="13" class="puzzle-cell puzzle-anim-14" id="24x13"></td>
-    <td row="24" col="14" class="puzzle-cell puzzle-anim-15 r" id="24x14"></td>
-    <td row="24" col="15" class="puzzle-cell puzzle-anim-16" id="24x15"></td>
-    <td row="24" col="16" class="puzzle-cell puzzle-anim-17" id="24x16"></td>
-    <td row="24" col="17" class="puzzle-cell puzzle-anim-18" id="24x17"></td>
-    <td row="24" col="18" class="puzzle-cell puzzle-anim-19" id="24x18"></td>
-    <td row="24" col="19" class="puzzle-cell puzzle-anim-20 r" id="24x19"></td>
-    <td row="24" col="20" class="puzzle-cell puzzle-anim-21" id="24x20"></td>
-    <td row="24" col="21" class="puzzle-cell puzzle-anim-22" id="24x21"></td>
-    <td row="24" col="22" class="puzzle-cell puzzle-anim-23" id="24x22"></td>
-    <td row="24" col="23" class="puzzle-cell puzzle-anim-24" id="24x23"></td>
-    <td row="24" col="24" class="puzzle-cell puzzle-anim-25" id="24x24"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  <tr>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-    <td class="puzzle-out"></td>
-  </tr>
-  </tbody>
-</table>
+  <table id="nonogram" cellspacing="0" cellpadding="1" border="1">
+    <tbody>
+    <tr class="b">
+      <td class="r">&nbsp;</td>
+      <td valign="bottom">1<br>4<br>1<br>1<br>2<br>3<br></td>
+      <td valign="bottom">2<br>4<br>1<br>1<br>2<br>1<br>1<br></td>
+      <td valign="bottom">2<br>4<br>1<br>1<br>1<br>2<br>1<br>1<br></td>
+      <td valign="bottom">1<br>1<br>1<br>1<br>1<br>2<br>1<br>1<br></td>
+      <td valign="bottom" class="r">1<br>1<br>2<br>2<br>1<br>1<br></td>
+      <td valign="bottom">1<br>1<br>2<br>1<br>2<br>1<br>1<br></td>
+      <td valign="bottom">2<br>1<br>1<br>2<br>1<br>2<br>2<br></td>
+      <td valign="bottom">1<br>1<br>3<br>1<br>1<br>2<br>2<br>3<br></td>
+      <td valign="bottom">1<br>2<br>3<br>2<br>1<br>3<br></td>
+      <td valign="bottom" class="r">1<br>2<br>2<br>2<br>1<br>3<br></td>
+      <td valign="bottom">1<br>1<br>2<br>1<br>3<br></td>
+      <td valign="bottom">1<br>1<br>1<br>2<br>1<br>3<br></td>
+      <td valign="bottom">2<br>1<br>1<br>2<br>1<br>3<br></td>
+      <td valign="bottom">1<br>1<br>1<br>1<br>1<br>3<br></td>
+      <td valign="bottom" class="r">1<br>2<br>1<br>2<br>1<br>3<br></td>
+      <td valign="bottom">1<br>4<br>1<br>1<br>2<br>5<br></td>
+      <td valign="bottom">2<br>3<br>3<br>3<br>5<br></td>
+      <td valign="bottom">7<br>3<br>1<br>8<br></td>
+      <td valign="bottom">3<br>1<br>1<br>1<br>1<br>3<br>4<br></td>
+      <td valign="bottom" class="r">1<br>1<br>1<br>1<br>3<br>2<br>1<br>1<br></td>
+      <td valign="bottom">2<br>1<br>1<br>1<br>3<br>2<br>1<br>1<br></td>
+      <td valign="bottom">2<br>2<br>1<br>4<br>3<br>1<br>1<br></td>
+      <td valign="bottom">2<br>2<br>1<br>1<br>1<br>3<br>1<br>1<br></td>
+      <td valign="bottom">5<br>3<br>1<br>3<br>1<br>1<br></td>
+      <td valign="bottom">1<br>2<br>2<br>1<br>1<br>2<br>3<br>1<br></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">3</td>
+      <td row="0" col="0" class="puzzle-cell puzzle-anim-25" id="0x0"></td>
+      <td row="0" col="1" class="puzzle-cell puzzle-anim-26" id="0x1"></td>
+      <td row="0" col="2" class="puzzle-cell puzzle-anim-27" id="0x2"></td>
+      <td row="0" col="3" class="puzzle-cell puzzle-anim-28" id="0x3"></td>
+      <td row="0" col="4" class="puzzle-cell puzzle-anim-29 r" id="0x4"></td>
+      <td row="0" col="5" class="puzzle-cell puzzle-anim-30" id="0x5"></td>
+      <td row="0" col="6" class="puzzle-cell puzzle-anim-31" id="0x6"></td>
+      <td row="0" col="7" class="puzzle-cell puzzle-anim-32" id="0x7"></td>
+      <td row="0" col="8" class="puzzle-cell puzzle-anim-33" id="0x8"></td>
+      <td row="0" col="9" class="puzzle-cell puzzle-anim-34 r" id="0x9"></td>
+      <td row="0" col="10" class="puzzle-cell puzzle-anim-35" id="0x10"></td>
+      <td row="0" col="11" class="puzzle-cell puzzle-anim-36" id="0x11"></td>
+      <td row="0" col="12" class="puzzle-cell puzzle-anim-37" id="0x12"></td>
+      <td row="0" col="13" class="puzzle-cell puzzle-anim-38" id="0x13"></td>
+      <td row="0" col="14" class="puzzle-cell puzzle-anim-39 r" id="0x14"></td>
+      <td row="0" col="15" class="puzzle-cell puzzle-anim-40" id="0x15"></td>
+      <td row="0" col="16" class="puzzle-cell puzzle-anim-41" id="0x16"></td>
+      <td row="0" col="17" class="puzzle-cell puzzle-anim-42" id="0x17"></td>
+      <td row="0" col="18" class="puzzle-cell puzzle-anim-43" id="0x18"></td>
+      <td row="0" col="19" class="puzzle-cell puzzle-anim-44 r" id="0x19"></td>
+      <td row="0" col="20" class="puzzle-cell puzzle-anim-45" id="0x20"></td>
+      <td row="0" col="21" class="puzzle-cell puzzle-anim-46" id="0x21"></td>
+      <td row="0" col="22" class="puzzle-cell puzzle-anim-47" id="0x22"></td>
+      <td row="0" col="23" class="puzzle-cell puzzle-anim-48" id="0x23"></td>
+      <td row="0" col="24" class="puzzle-cell puzzle-anim-49" id="0x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">5</td>
+      <td row="1" col="0" class="puzzle-cell puzzle-anim-24" id="1x0"></td>
+      <td row="1" col="1" class="puzzle-cell puzzle-anim-25" id="1x1"></td>
+      <td row="1" col="2" class="puzzle-cell puzzle-anim-26" id="1x2"></td>
+      <td row="1" col="3" class="puzzle-cell puzzle-anim-27" id="1x3"></td>
+      <td row="1" col="4" class="puzzle-cell puzzle-anim-28 r" id="1x4"></td>
+      <td row="1" col="5" class="puzzle-cell puzzle-anim-29" id="1x5"></td>
+      <td row="1" col="6" class="puzzle-cell puzzle-anim-30" id="1x6"></td>
+      <td row="1" col="7" class="puzzle-cell puzzle-anim-31" id="1x7"></td>
+      <td row="1" col="8" class="puzzle-cell puzzle-anim-32" id="1x8"></td>
+      <td row="1" col="9" class="puzzle-cell puzzle-anim-33 r" id="1x9"></td>
+      <td row="1" col="10" class="puzzle-cell puzzle-anim-34" id="1x10"></td>
+      <td row="1" col="11" class="puzzle-cell puzzle-anim-35" id="1x11"></td>
+      <td row="1" col="12" class="puzzle-cell puzzle-anim-36" id="1x12"></td>
+      <td row="1" col="13" class="puzzle-cell puzzle-anim-37" id="1x13"></td>
+      <td row="1" col="14" class="puzzle-cell puzzle-anim-38 r" id="1x14"></td>
+      <td row="1" col="15" class="puzzle-cell puzzle-anim-39" id="1x15"></td>
+      <td row="1" col="16" class="puzzle-cell puzzle-anim-40" id="1x16"></td>
+      <td row="1" col="17" class="puzzle-cell puzzle-anim-41" id="1x17"></td>
+      <td row="1" col="18" class="puzzle-cell puzzle-anim-42" id="1x18"></td>
+      <td row="1" col="19" class="puzzle-cell puzzle-anim-43 r" id="1x19"></td>
+      <td row="1" col="20" class="puzzle-cell puzzle-anim-44" id="1x20"></td>
+      <td row="1" col="21" class="puzzle-cell puzzle-anim-45" id="1x21"></td>
+      <td row="1" col="22" class="puzzle-cell puzzle-anim-46" id="1x22"></td>
+      <td row="1" col="23" class="puzzle-cell puzzle-anim-47" id="1x23"></td>
+      <td row="1" col="24" class="puzzle-cell puzzle-anim-48" id="1x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">3 2 1 8</td>
+      <td row="2" col="0" class="puzzle-cell puzzle-anim-23" id="2x0"></td>
+      <td row="2" col="1" class="puzzle-cell puzzle-anim-24" id="2x1"></td>
+      <td row="2" col="2" class="puzzle-cell puzzle-anim-25" id="2x2"></td>
+      <td row="2" col="3" class="puzzle-cell puzzle-anim-26" id="2x3"></td>
+      <td row="2" col="4" class="puzzle-cell puzzle-anim-27 r" id="2x4"></td>
+      <td row="2" col="5" class="puzzle-cell puzzle-anim-28" id="2x5"></td>
+      <td row="2" col="6" class="puzzle-cell puzzle-anim-29" id="2x6"></td>
+      <td row="2" col="7" class="puzzle-cell puzzle-anim-30" id="2x7"></td>
+      <td row="2" col="8" class="puzzle-cell puzzle-anim-31" id="2x8"></td>
+      <td row="2" col="9" class="puzzle-cell puzzle-anim-32 r" id="2x9"></td>
+      <td row="2" col="10" class="puzzle-cell puzzle-anim-33" id="2x10"></td>
+      <td row="2" col="11" class="puzzle-cell puzzle-anim-34" id="2x11"></td>
+      <td row="2" col="12" class="puzzle-cell puzzle-anim-35" id="2x12"></td>
+      <td row="2" col="13" class="puzzle-cell puzzle-anim-36" id="2x13"></td>
+      <td row="2" col="14" class="puzzle-cell puzzle-anim-37 r" id="2x14"></td>
+      <td row="2" col="15" class="puzzle-cell puzzle-anim-38" id="2x15"></td>
+      <td row="2" col="16" class="puzzle-cell puzzle-anim-39" id="2x16"></td>
+      <td row="2" col="17" class="puzzle-cell puzzle-anim-40" id="2x17"></td>
+      <td row="2" col="18" class="puzzle-cell puzzle-anim-41" id="2x18"></td>
+      <td row="2" col="19" class="puzzle-cell puzzle-anim-42 r" id="2x19"></td>
+      <td row="2" col="20" class="puzzle-cell puzzle-anim-43" id="2x20"></td>
+      <td row="2" col="21" class="puzzle-cell puzzle-anim-44" id="2x21"></td>
+      <td row="2" col="22" class="puzzle-cell puzzle-anim-45" id="2x22"></td>
+      <td row="2" col="23" class="puzzle-cell puzzle-anim-46" id="2x23"></td>
+      <td row="2" col="24" class="puzzle-cell puzzle-anim-47" id="2x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">6 7 1</td>
+      <td row="3" col="0" class="puzzle-cell puzzle-anim-22" id="3x0"></td>
+      <td row="3" col="1" class="puzzle-cell puzzle-anim-23" id="3x1"></td>
+      <td row="3" col="2" class="puzzle-cell puzzle-anim-24" id="3x2"></td>
+      <td row="3" col="3" class="puzzle-cell puzzle-anim-25" id="3x3"></td>
+      <td row="3" col="4" class="puzzle-cell puzzle-anim-26 r" id="3x4"></td>
+      <td row="3" col="5" class="puzzle-cell puzzle-anim-27" id="3x5"></td>
+      <td row="3" col="6" class="puzzle-cell puzzle-anim-28" id="3x6"></td>
+      <td row="3" col="7" class="puzzle-cell puzzle-anim-29" id="3x7"></td>
+      <td row="3" col="8" class="puzzle-cell puzzle-anim-30" id="3x8"></td>
+      <td row="3" col="9" class="puzzle-cell puzzle-anim-31 r" id="3x9"></td>
+      <td row="3" col="10" class="puzzle-cell puzzle-anim-32" id="3x10"></td>
+      <td row="3" col="11" class="puzzle-cell puzzle-anim-33" id="3x11"></td>
+      <td row="3" col="12" class="puzzle-cell puzzle-anim-34" id="3x12"></td>
+      <td row="3" col="13" class="puzzle-cell puzzle-anim-35" id="3x13"></td>
+      <td row="3" col="14" class="puzzle-cell puzzle-anim-36 r" id="3x14"></td>
+      <td row="3" col="15" class="puzzle-cell puzzle-anim-37" id="3x15"></td>
+      <td row="3" col="16" class="puzzle-cell puzzle-anim-38" id="3x16"></td>
+      <td row="3" col="17" class="puzzle-cell puzzle-anim-39" id="3x17"></td>
+      <td row="3" col="18" class="puzzle-cell puzzle-anim-40" id="3x18"></td>
+      <td row="3" col="19" class="puzzle-cell puzzle-anim-41 r" id="3x19"></td>
+      <td row="3" col="20" class="puzzle-cell puzzle-anim-42" id="3x20"></td>
+      <td row="3" col="21" class="puzzle-cell puzzle-anim-43" id="3x21"></td>
+      <td row="3" col="22" class="puzzle-cell puzzle-anim-44" id="3x22"></td>
+      <td row="3" col="23" class="puzzle-cell puzzle-anim-45" id="3x23"></td>
+      <td row="3" col="24" class="puzzle-cell puzzle-anim-46" id="3x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr class="b">
+      <td class="left-numbers">4 2</td>
+      <td row="4" col="0" class="puzzle-cell puzzle-anim-21" id="4x0"></td>
+      <td row="4" col="1" class="puzzle-cell puzzle-anim-22" id="4x1"></td>
+      <td row="4" col="2" class="puzzle-cell puzzle-anim-23" id="4x2"></td>
+      <td row="4" col="3" class="puzzle-cell puzzle-anim-24" id="4x3"></td>
+      <td row="4" col="4" class="puzzle-cell puzzle-anim-25 r" id="4x4"></td>
+      <td row="4" col="5" class="puzzle-cell puzzle-anim-26" id="4x5"></td>
+      <td row="4" col="6" class="puzzle-cell puzzle-anim-27" id="4x6"></td>
+      <td row="4" col="7" class="puzzle-cell puzzle-anim-28" id="4x7"></td>
+      <td row="4" col="8" class="puzzle-cell puzzle-anim-29" id="4x8"></td>
+      <td row="4" col="9" class="puzzle-cell puzzle-anim-30 r" id="4x9"></td>
+      <td row="4" col="10" class="puzzle-cell puzzle-anim-31" id="4x10"></td>
+      <td row="4" col="11" class="puzzle-cell puzzle-anim-32" id="4x11"></td>
+      <td row="4" col="12" class="puzzle-cell puzzle-anim-33" id="4x12"></td>
+      <td row="4" col="13" class="puzzle-cell puzzle-anim-34" id="4x13"></td>
+      <td row="4" col="14" class="puzzle-cell puzzle-anim-35 r" id="4x14"></td>
+      <td row="4" col="15" class="puzzle-cell puzzle-anim-36" id="4x15"></td>
+      <td row="4" col="16" class="puzzle-cell puzzle-anim-37" id="4x16"></td>
+      <td row="4" col="17" class="puzzle-cell puzzle-anim-38" id="4x17"></td>
+      <td row="4" col="18" class="puzzle-cell puzzle-anim-39" id="4x18"></td>
+      <td row="4" col="19" class="puzzle-cell puzzle-anim-40 r" id="4x19"></td>
+      <td row="4" col="20" class="puzzle-cell puzzle-anim-41" id="4x20"></td>
+      <td row="4" col="21" class="puzzle-cell puzzle-anim-42" id="4x21"></td>
+      <td row="4" col="22" class="puzzle-cell puzzle-anim-43" id="4x22"></td>
+      <td row="4" col="23" class="puzzle-cell puzzle-anim-44" id="4x23"></td>
+      <td row="4" col="24" class="puzzle-cell puzzle-anim-45" id="4x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">8 3 4</td>
+      <td row="5" col="0" class="puzzle-cell puzzle-anim-20" id="5x0"></td>
+      <td row="5" col="1" class="puzzle-cell puzzle-anim-21" id="5x1"></td>
+      <td row="5" col="2" class="puzzle-cell puzzle-anim-22" id="5x2"></td>
+      <td row="5" col="3" class="puzzle-cell puzzle-anim-23" id="5x3"></td>
+      <td row="5" col="4" class="puzzle-cell puzzle-anim-24 r" id="5x4"></td>
+      <td row="5" col="5" class="puzzle-cell puzzle-anim-25" id="5x5"></td>
+      <td row="5" col="6" class="puzzle-cell puzzle-anim-26" id="5x6"></td>
+      <td row="5" col="7" class="puzzle-cell puzzle-anim-27" id="5x7"></td>
+      <td row="5" col="8" class="puzzle-cell puzzle-anim-28" id="5x8"></td>
+      <td row="5" col="9" class="puzzle-cell puzzle-anim-29 r" id="5x9"></td>
+      <td row="5" col="10" class="puzzle-cell puzzle-anim-30" id="5x10"></td>
+      <td row="5" col="11" class="puzzle-cell puzzle-anim-31" id="5x11"></td>
+      <td row="5" col="12" class="puzzle-cell puzzle-anim-32" id="5x12"></td>
+      <td row="5" col="13" class="puzzle-cell puzzle-anim-33" id="5x13"></td>
+      <td row="5" col="14" class="puzzle-cell puzzle-anim-34 r" id="5x14"></td>
+      <td row="5" col="15" class="puzzle-cell puzzle-anim-35" id="5x15"></td>
+      <td row="5" col="16" class="puzzle-cell puzzle-anim-36" id="5x16"></td>
+      <td row="5" col="17" class="puzzle-cell puzzle-anim-37" id="5x17"></td>
+      <td row="5" col="18" class="puzzle-cell puzzle-anim-38" id="5x18"></td>
+      <td row="5" col="19" class="puzzle-cell puzzle-anim-39 r" id="5x19"></td>
+      <td row="5" col="20" class="puzzle-cell puzzle-anim-40" id="5x20"></td>
+      <td row="5" col="21" class="puzzle-cell puzzle-anim-41" id="5x21"></td>
+      <td row="5" col="22" class="puzzle-cell puzzle-anim-42" id="5x22"></td>
+      <td row="5" col="23" class="puzzle-cell puzzle-anim-43" id="5x23"></td>
+      <td row="5" col="24" class="puzzle-cell puzzle-anim-44" id="5x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">3 3 9</td>
+      <td row="6" col="0" class="puzzle-cell puzzle-anim-19" id="6x0"></td>
+      <td row="6" col="1" class="puzzle-cell puzzle-anim-20" id="6x1"></td>
+      <td row="6" col="2" class="puzzle-cell puzzle-anim-21" id="6x2"></td>
+      <td row="6" col="3" class="puzzle-cell puzzle-anim-22" id="6x3"></td>
+      <td row="6" col="4" class="puzzle-cell puzzle-anim-23 r" id="6x4"></td>
+      <td row="6" col="5" class="puzzle-cell puzzle-anim-24" id="6x5"></td>
+      <td row="6" col="6" class="puzzle-cell puzzle-anim-25" id="6x6"></td>
+      <td row="6" col="7" class="puzzle-cell puzzle-anim-26" id="6x7"></td>
+      <td row="6" col="8" class="puzzle-cell puzzle-anim-27" id="6x8"></td>
+      <td row="6" col="9" class="puzzle-cell puzzle-anim-28 r" id="6x9"></td>
+      <td row="6" col="10" class="puzzle-cell puzzle-anim-29" id="6x10"></td>
+      <td row="6" col="11" class="puzzle-cell puzzle-anim-30" id="6x11"></td>
+      <td row="6" col="12" class="puzzle-cell puzzle-anim-31" id="6x12"></td>
+      <td row="6" col="13" class="puzzle-cell puzzle-anim-32" id="6x13"></td>
+      <td row="6" col="14" class="puzzle-cell puzzle-anim-33 r" id="6x14"></td>
+      <td row="6" col="15" class="puzzle-cell puzzle-anim-34" id="6x15"></td>
+      <td row="6" col="16" class="puzzle-cell puzzle-anim-35" id="6x16"></td>
+      <td row="6" col="17" class="puzzle-cell puzzle-anim-36" id="6x17"></td>
+      <td row="6" col="18" class="puzzle-cell puzzle-anim-37" id="6x18"></td>
+      <td row="6" col="19" class="puzzle-cell puzzle-anim-38 r" id="6x19"></td>
+      <td row="6" col="20" class="puzzle-cell puzzle-anim-39" id="6x20"></td>
+      <td row="6" col="21" class="puzzle-cell puzzle-anim-40" id="6x21"></td>
+      <td row="6" col="22" class="puzzle-cell puzzle-anim-41" id="6x22"></td>
+      <td row="6" col="23" class="puzzle-cell puzzle-anim-42" id="6x23"></td>
+      <td row="6" col="24" class="puzzle-cell puzzle-anim-43" id="6x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">4 6 5 2</td>
+      <td row="7" col="0" class="puzzle-cell puzzle-anim-18" id="7x0"></td>
+      <td row="7" col="1" class="puzzle-cell puzzle-anim-19" id="7x1"></td>
+      <td row="7" col="2" class="puzzle-cell puzzle-anim-20" id="7x2"></td>
+      <td row="7" col="3" class="puzzle-cell puzzle-anim-21" id="7x3"></td>
+      <td row="7" col="4" class="puzzle-cell puzzle-anim-22 r" id="7x4"></td>
+      <td row="7" col="5" class="puzzle-cell puzzle-anim-23" id="7x5"></td>
+      <td row="7" col="6" class="puzzle-cell puzzle-anim-24" id="7x6"></td>
+      <td row="7" col="7" class="puzzle-cell puzzle-anim-25" id="7x7"></td>
+      <td row="7" col="8" class="puzzle-cell puzzle-anim-26" id="7x8"></td>
+      <td row="7" col="9" class="puzzle-cell puzzle-anim-27 r" id="7x9"></td>
+      <td row="7" col="10" class="puzzle-cell puzzle-anim-28" id="7x10"></td>
+      <td row="7" col="11" class="puzzle-cell puzzle-anim-29" id="7x11"></td>
+      <td row="7" col="12" class="puzzle-cell puzzle-anim-30" id="7x12"></td>
+      <td row="7" col="13" class="puzzle-cell puzzle-anim-31" id="7x13"></td>
+      <td row="7" col="14" class="puzzle-cell puzzle-anim-32 r" id="7x14"></td>
+      <td row="7" col="15" class="puzzle-cell puzzle-anim-33" id="7x15"></td>
+      <td row="7" col="16" class="puzzle-cell puzzle-anim-34" id="7x16"></td>
+      <td row="7" col="17" class="puzzle-cell puzzle-anim-35" id="7x17"></td>
+      <td row="7" col="18" class="puzzle-cell puzzle-anim-36" id="7x18"></td>
+      <td row="7" col="19" class="puzzle-cell puzzle-anim-37 r" id="7x19"></td>
+      <td row="7" col="20" class="puzzle-cell puzzle-anim-38" id="7x20"></td>
+      <td row="7" col="21" class="puzzle-cell puzzle-anim-39" id="7x21"></td>
+      <td row="7" col="22" class="puzzle-cell puzzle-anim-40" id="7x22"></td>
+      <td row="7" col="23" class="puzzle-cell puzzle-anim-41" id="7x23"></td>
+      <td row="7" col="24" class="puzzle-cell puzzle-anim-42" id="7x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">3 1 8</td>
+      <td row="8" col="0" class="puzzle-cell puzzle-anim-17" id="8x0"></td>
+      <td row="8" col="1" class="puzzle-cell puzzle-anim-18" id="8x1"></td>
+      <td row="8" col="2" class="puzzle-cell puzzle-anim-19" id="8x2"></td>
+      <td row="8" col="3" class="puzzle-cell puzzle-anim-20" id="8x3"></td>
+      <td row="8" col="4" class="puzzle-cell puzzle-anim-21 r" id="8x4"></td>
+      <td row="8" col="5" class="puzzle-cell puzzle-anim-22" id="8x5"></td>
+      <td row="8" col="6" class="puzzle-cell puzzle-anim-23" id="8x6"></td>
+      <td row="8" col="7" class="puzzle-cell puzzle-anim-24" id="8x7"></td>
+      <td row="8" col="8" class="puzzle-cell puzzle-anim-25" id="8x8"></td>
+      <td row="8" col="9" class="puzzle-cell puzzle-anim-26 r" id="8x9"></td>
+      <td row="8" col="10" class="puzzle-cell puzzle-anim-27" id="8x10"></td>
+      <td row="8" col="11" class="puzzle-cell puzzle-anim-28" id="8x11"></td>
+      <td row="8" col="12" class="puzzle-cell puzzle-anim-29" id="8x12"></td>
+      <td row="8" col="13" class="puzzle-cell puzzle-anim-30" id="8x13"></td>
+      <td row="8" col="14" class="puzzle-cell puzzle-anim-31 r" id="8x14"></td>
+      <td row="8" col="15" class="puzzle-cell puzzle-anim-32" id="8x15"></td>
+      <td row="8" col="16" class="puzzle-cell puzzle-anim-33" id="8x16"></td>
+      <td row="8" col="17" class="puzzle-cell puzzle-anim-34" id="8x17"></td>
+      <td row="8" col="18" class="puzzle-cell puzzle-anim-35" id="8x18"></td>
+      <td row="8" col="19" class="puzzle-cell puzzle-anim-36 r" id="8x19"></td>
+      <td row="8" col="20" class="puzzle-cell puzzle-anim-37" id="8x20"></td>
+      <td row="8" col="21" class="puzzle-cell puzzle-anim-38" id="8x21"></td>
+      <td row="8" col="22" class="puzzle-cell puzzle-anim-39" id="8x22"></td>
+      <td row="8" col="23" class="puzzle-cell puzzle-anim-40" id="8x23"></td>
+      <td row="8" col="24" class="puzzle-cell puzzle-anim-41" id="8x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr class="b">
+      <td class="left-numbers">1</td>
+      <td row="9" col="0" class="puzzle-cell puzzle-anim-16" id="9x0"></td>
+      <td row="9" col="1" class="puzzle-cell puzzle-anim-17" id="9x1"></td>
+      <td row="9" col="2" class="puzzle-cell puzzle-anim-18" id="9x2"></td>
+      <td row="9" col="3" class="puzzle-cell puzzle-anim-19" id="9x3"></td>
+      <td row="9" col="4" class="puzzle-cell puzzle-anim-20 r" id="9x4"></td>
+      <td row="9" col="5" class="puzzle-cell puzzle-anim-21" id="9x5"></td>
+      <td row="9" col="6" class="puzzle-cell puzzle-anim-22" id="9x6"></td>
+      <td row="9" col="7" class="puzzle-cell puzzle-anim-23" id="9x7"></td>
+      <td row="9" col="8" class="puzzle-cell puzzle-anim-24" id="9x8"></td>
+      <td row="9" col="9" class="puzzle-cell puzzle-anim-25 r" id="9x9"></td>
+      <td row="9" col="10" class="puzzle-cell puzzle-anim-26" id="9x10"></td>
+      <td row="9" col="11" class="puzzle-cell puzzle-anim-27" id="9x11"></td>
+      <td row="9" col="12" class="puzzle-cell puzzle-anim-28" id="9x12"></td>
+      <td row="9" col="13" class="puzzle-cell puzzle-anim-29" id="9x13"></td>
+      <td row="9" col="14" class="puzzle-cell puzzle-anim-30 r" id="9x14"></td>
+      <td row="9" col="15" class="puzzle-cell puzzle-anim-31" id="9x15"></td>
+      <td row="9" col="16" class="puzzle-cell puzzle-anim-32" id="9x16"></td>
+      <td row="9" col="17" class="puzzle-cell puzzle-anim-33" id="9x17"></td>
+      <td row="9" col="18" class="puzzle-cell puzzle-anim-34" id="9x18"></td>
+      <td row="9" col="19" class="puzzle-cell puzzle-anim-35 r" id="9x19"></td>
+      <td row="9" col="20" class="puzzle-cell puzzle-anim-36" id="9x20"></td>
+      <td row="9" col="21" class="puzzle-cell puzzle-anim-37" id="9x21"></td>
+      <td row="9" col="22" class="puzzle-cell puzzle-anim-38" id="9x22"></td>
+      <td row="9" col="23" class="puzzle-cell puzzle-anim-39" id="9x23"></td>
+      <td row="9" col="24" class="puzzle-cell puzzle-anim-40" id="9x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">8 2</td>
+      <td row="10" col="0" class="puzzle-cell puzzle-anim-15" id="10x0"></td>
+      <td row="10" col="1" class="puzzle-cell puzzle-anim-16" id="10x1"></td>
+      <td row="10" col="2" class="puzzle-cell puzzle-anim-17" id="10x2"></td>
+      <td row="10" col="3" class="puzzle-cell puzzle-anim-18" id="10x3"></td>
+      <td row="10" col="4" class="puzzle-cell puzzle-anim-19 r" id="10x4"></td>
+      <td row="10" col="5" class="puzzle-cell puzzle-anim-20" id="10x5"></td>
+      <td row="10" col="6" class="puzzle-cell puzzle-anim-21" id="10x6"></td>
+      <td row="10" col="7" class="puzzle-cell puzzle-anim-22" id="10x7"></td>
+      <td row="10" col="8" class="puzzle-cell puzzle-anim-23" id="10x8"></td>
+      <td row="10" col="9" class="puzzle-cell puzzle-anim-24 r" id="10x9"></td>
+      <td row="10" col="10" class="puzzle-cell puzzle-anim-25" id="10x10"></td>
+      <td row="10" col="11" class="puzzle-cell puzzle-anim-26" id="10x11"></td>
+      <td row="10" col="12" class="puzzle-cell puzzle-anim-27" id="10x12"></td>
+      <td row="10" col="13" class="puzzle-cell puzzle-anim-28" id="10x13"></td>
+      <td row="10" col="14" class="puzzle-cell puzzle-anim-29 r" id="10x14"></td>
+      <td row="10" col="15" class="puzzle-cell puzzle-anim-30" id="10x15"></td>
+      <td row="10" col="16" class="puzzle-cell puzzle-anim-31" id="10x16"></td>
+      <td row="10" col="17" class="puzzle-cell puzzle-anim-32" id="10x17"></td>
+      <td row="10" col="18" class="puzzle-cell puzzle-anim-33" id="10x18"></td>
+      <td row="10" col="19" class="puzzle-cell puzzle-anim-34 r" id="10x19"></td>
+      <td row="10" col="20" class="puzzle-cell puzzle-anim-35" id="10x20"></td>
+      <td row="10" col="21" class="puzzle-cell puzzle-anim-36" id="10x21"></td>
+      <td row="10" col="22" class="puzzle-cell puzzle-anim-37" id="10x22"></td>
+      <td row="10" col="23" class="puzzle-cell puzzle-anim-38" id="10x23"></td>
+      <td row="10" col="24" class="puzzle-cell puzzle-anim-39" id="10x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">2 7 1</td>
+      <td row="11" col="0" class="puzzle-cell puzzle-anim-14" id="11x0"></td>
+      <td row="11" col="1" class="puzzle-cell puzzle-anim-15" id="11x1"></td>
+      <td row="11" col="2" class="puzzle-cell puzzle-anim-16" id="11x2"></td>
+      <td row="11" col="3" class="puzzle-cell puzzle-anim-17" id="11x3"></td>
+      <td row="11" col="4" class="puzzle-cell puzzle-anim-18 r" id="11x4"></td>
+      <td row="11" col="5" class="puzzle-cell puzzle-anim-19" id="11x5"></td>
+      <td row="11" col="6" class="puzzle-cell puzzle-anim-20" id="11x6"></td>
+      <td row="11" col="7" class="puzzle-cell puzzle-anim-21" id="11x7"></td>
+      <td row="11" col="8" class="puzzle-cell puzzle-anim-22" id="11x8"></td>
+      <td row="11" col="9" class="puzzle-cell puzzle-anim-23 r" id="11x9"></td>
+      <td row="11" col="10" class="puzzle-cell puzzle-anim-24" id="11x10"></td>
+      <td row="11" col="11" class="puzzle-cell puzzle-anim-25" id="11x11"></td>
+      <td row="11" col="12" class="puzzle-cell puzzle-anim-26" id="11x12"></td>
+      <td row="11" col="13" class="puzzle-cell puzzle-anim-27" id="11x13"></td>
+      <td row="11" col="14" class="puzzle-cell puzzle-anim-28 r" id="11x14"></td>
+      <td row="11" col="15" class="puzzle-cell puzzle-anim-29" id="11x15"></td>
+      <td row="11" col="16" class="puzzle-cell puzzle-anim-30" id="11x16"></td>
+      <td row="11" col="17" class="puzzle-cell puzzle-anim-31" id="11x17"></td>
+      <td row="11" col="18" class="puzzle-cell puzzle-anim-32" id="11x18"></td>
+      <td row="11" col="19" class="puzzle-cell puzzle-anim-33 r" id="11x19"></td>
+      <td row="11" col="20" class="puzzle-cell puzzle-anim-34" id="11x20"></td>
+      <td row="11" col="21" class="puzzle-cell puzzle-anim-35" id="11x21"></td>
+      <td row="11" col="22" class="puzzle-cell puzzle-anim-36" id="11x22"></td>
+      <td row="11" col="23" class="puzzle-cell puzzle-anim-37" id="11x23"></td>
+      <td row="11" col="24" class="puzzle-cell puzzle-anim-38" id="11x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">5 1 2 5</td>
+      <td row="12" col="0" class="puzzle-cell puzzle-anim-13" id="12x0"></td>
+      <td row="12" col="1" class="puzzle-cell puzzle-anim-14" id="12x1"></td>
+      <td row="12" col="2" class="puzzle-cell puzzle-anim-15" id="12x2"></td>
+      <td row="12" col="3" class="puzzle-cell puzzle-anim-16" id="12x3"></td>
+      <td row="12" col="4" class="puzzle-cell puzzle-anim-17 r" id="12x4"></td>
+      <td row="12" col="5" class="puzzle-cell puzzle-anim-18" id="12x5"></td>
+      <td row="12" col="6" class="puzzle-cell puzzle-anim-19" id="12x6"></td>
+      <td row="12" col="7" class="puzzle-cell puzzle-anim-20" id="12x7"></td>
+      <td row="12" col="8" class="puzzle-cell puzzle-anim-21" id="12x8"></td>
+      <td row="12" col="9" class="puzzle-cell puzzle-anim-22 r" id="12x9"></td>
+      <td row="12" col="10" class="puzzle-cell puzzle-anim-23" id="12x10"></td>
+      <td row="12" col="11" class="puzzle-cell puzzle-anim-24" id="12x11"></td>
+      <td row="12" col="12" class="puzzle-cell puzzle-anim-25" id="12x12"></td>
+      <td row="12" col="13" class="puzzle-cell puzzle-anim-26" id="12x13"></td>
+      <td row="12" col="14" class="puzzle-cell puzzle-anim-27 r" id="12x14"></td>
+      <td row="12" col="15" class="puzzle-cell puzzle-anim-28" id="12x15"></td>
+      <td row="12" col="16" class="puzzle-cell puzzle-anim-29" id="12x16"></td>
+      <td row="12" col="17" class="puzzle-cell puzzle-anim-30" id="12x17"></td>
+      <td row="12" col="18" class="puzzle-cell puzzle-anim-31" id="12x18"></td>
+      <td row="12" col="19" class="puzzle-cell puzzle-anim-32 r" id="12x19"></td>
+      <td row="12" col="20" class="puzzle-cell puzzle-anim-33" id="12x20"></td>
+      <td row="12" col="21" class="puzzle-cell puzzle-anim-34" id="12x21"></td>
+      <td row="12" col="22" class="puzzle-cell puzzle-anim-35" id="12x22"></td>
+      <td row="12" col="23" class="puzzle-cell puzzle-anim-36" id="12x23"></td>
+      <td row="12" col="24" class="puzzle-cell puzzle-anim-37" id="12x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">4 2 7</td>
+      <td row="13" col="0" class="puzzle-cell puzzle-anim-12" id="13x0"></td>
+      <td row="13" col="1" class="puzzle-cell puzzle-anim-13" id="13x1"></td>
+      <td row="13" col="2" class="puzzle-cell puzzle-anim-14" id="13x2"></td>
+      <td row="13" col="3" class="puzzle-cell puzzle-anim-15" id="13x3"></td>
+      <td row="13" col="4" class="puzzle-cell puzzle-anim-16 r" id="13x4"></td>
+      <td row="13" col="5" class="puzzle-cell puzzle-anim-17" id="13x5"></td>
+      <td row="13" col="6" class="puzzle-cell puzzle-anim-18" id="13x6"></td>
+      <td row="13" col="7" class="puzzle-cell puzzle-anim-19" id="13x7"></td>
+      <td row="13" col="8" class="puzzle-cell puzzle-anim-20" id="13x8"></td>
+      <td row="13" col="9" class="puzzle-cell puzzle-anim-21 r" id="13x9"></td>
+      <td row="13" col="10" class="puzzle-cell puzzle-anim-22" id="13x10"></td>
+      <td row="13" col="11" class="puzzle-cell puzzle-anim-23" id="13x11"></td>
+      <td row="13" col="12" class="puzzle-cell puzzle-anim-24" id="13x12"></td>
+      <td row="13" col="13" class="puzzle-cell puzzle-anim-25" id="13x13"></td>
+      <td row="13" col="14" class="puzzle-cell puzzle-anim-26 r" id="13x14"></td>
+      <td row="13" col="15" class="puzzle-cell puzzle-anim-27" id="13x15"></td>
+      <td row="13" col="16" class="puzzle-cell puzzle-anim-28" id="13x16"></td>
+      <td row="13" col="17" class="puzzle-cell puzzle-anim-29" id="13x17"></td>
+      <td row="13" col="18" class="puzzle-cell puzzle-anim-30" id="13x18"></td>
+      <td row="13" col="19" class="puzzle-cell puzzle-anim-31 r" id="13x19"></td>
+      <td row="13" col="20" class="puzzle-cell puzzle-anim-32" id="13x20"></td>
+      <td row="13" col="21" class="puzzle-cell puzzle-anim-33" id="13x21"></td>
+      <td row="13" col="22" class="puzzle-cell puzzle-anim-34" id="13x22"></td>
+      <td row="13" col="23" class="puzzle-cell puzzle-anim-35" id="13x23"></td>
+      <td row="13" col="24" class="puzzle-cell puzzle-anim-36" id="13x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr class="b">
+      <td class="left-numbers">3</td>
+      <td row="14" col="0" class="puzzle-cell puzzle-anim-11" id="14x0"></td>
+      <td row="14" col="1" class="puzzle-cell puzzle-anim-12" id="14x1"></td>
+      <td row="14" col="2" class="puzzle-cell puzzle-anim-13" id="14x2"></td>
+      <td row="14" col="3" class="puzzle-cell puzzle-anim-14" id="14x3"></td>
+      <td row="14" col="4" class="puzzle-cell puzzle-anim-15 r" id="14x4"></td>
+      <td row="14" col="5" class="puzzle-cell puzzle-anim-16" id="14x5"></td>
+      <td row="14" col="6" class="puzzle-cell puzzle-anim-17" id="14x6"></td>
+      <td row="14" col="7" class="puzzle-cell puzzle-anim-18" id="14x7"></td>
+      <td row="14" col="8" class="puzzle-cell puzzle-anim-19" id="14x8"></td>
+      <td row="14" col="9" class="puzzle-cell puzzle-anim-20 r" id="14x9"></td>
+      <td row="14" col="10" class="puzzle-cell puzzle-anim-21" id="14x10"></td>
+      <td row="14" col="11" class="puzzle-cell puzzle-anim-22" id="14x11"></td>
+      <td row="14" col="12" class="puzzle-cell puzzle-anim-23" id="14x12"></td>
+      <td row="14" col="13" class="puzzle-cell puzzle-anim-24" id="14x13"></td>
+      <td row="14" col="14" class="puzzle-cell puzzle-anim-25 r" id="14x14"></td>
+      <td row="14" col="15" class="puzzle-cell puzzle-anim-26" id="14x15"></td>
+      <td row="14" col="16" class="puzzle-cell puzzle-anim-27" id="14x16"></td>
+      <td row="14" col="17" class="puzzle-cell puzzle-anim-28" id="14x17"></td>
+      <td row="14" col="18" class="puzzle-cell puzzle-anim-29" id="14x18"></td>
+      <td row="14" col="19" class="puzzle-cell puzzle-anim-30 r" id="14x19"></td>
+      <td row="14" col="20" class="puzzle-cell puzzle-anim-31" id="14x20"></td>
+      <td row="14" col="21" class="puzzle-cell puzzle-anim-32" id="14x21"></td>
+      <td row="14" col="22" class="puzzle-cell puzzle-anim-33" id="14x22"></td>
+      <td row="14" col="23" class="puzzle-cell puzzle-anim-34" id="14x23"></td>
+      <td row="14" col="24" class="puzzle-cell puzzle-anim-35" id="14x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">1 4 2 1</td>
+      <td row="15" col="0" class="puzzle-cell puzzle-anim-10" id="15x0"></td>
+      <td row="15" col="1" class="puzzle-cell puzzle-anim-11" id="15x1"></td>
+      <td row="15" col="2" class="puzzle-cell puzzle-anim-12" id="15x2"></td>
+      <td row="15" col="3" class="puzzle-cell puzzle-anim-13" id="15x3"></td>
+      <td row="15" col="4" class="puzzle-cell puzzle-anim-14 r" id="15x4"></td>
+      <td row="15" col="5" class="puzzle-cell puzzle-anim-15" id="15x5"></td>
+      <td row="15" col="6" class="puzzle-cell puzzle-anim-16" id="15x6"></td>
+      <td row="15" col="7" class="puzzle-cell puzzle-anim-17" id="15x7"></td>
+      <td row="15" col="8" class="puzzle-cell puzzle-anim-18" id="15x8"></td>
+      <td row="15" col="9" class="puzzle-cell puzzle-anim-19 r" id="15x9"></td>
+      <td row="15" col="10" class="puzzle-cell puzzle-anim-20" id="15x10"></td>
+      <td row="15" col="11" class="puzzle-cell puzzle-anim-21" id="15x11"></td>
+      <td row="15" col="12" class="puzzle-cell puzzle-anim-22" id="15x12"></td>
+      <td row="15" col="13" class="puzzle-cell puzzle-anim-23" id="15x13"></td>
+      <td row="15" col="14" class="puzzle-cell puzzle-anim-24 r" id="15x14"></td>
+      <td row="15" col="15" class="puzzle-cell puzzle-anim-25" id="15x15"></td>
+      <td row="15" col="16" class="puzzle-cell puzzle-anim-26" id="15x16"></td>
+      <td row="15" col="17" class="puzzle-cell puzzle-anim-27" id="15x17"></td>
+      <td row="15" col="18" class="puzzle-cell puzzle-anim-28" id="15x18"></td>
+      <td row="15" col="19" class="puzzle-cell puzzle-anim-29 r" id="15x19"></td>
+      <td row="15" col="20" class="puzzle-cell puzzle-anim-30" id="15x20"></td>
+      <td row="15" col="21" class="puzzle-cell puzzle-anim-31" id="15x21"></td>
+      <td row="15" col="22" class="puzzle-cell puzzle-anim-32" id="15x22"></td>
+      <td row="15" col="23" class="puzzle-cell puzzle-anim-33" id="15x23"></td>
+      <td row="15" col="24" class="puzzle-cell puzzle-anim-34" id="15x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">3 8 3</td>
+      <td row="16" col="0" class="puzzle-cell puzzle-anim-9" id="16x0"></td>
+      <td row="16" col="1" class="puzzle-cell puzzle-anim-10" id="16x1"></td>
+      <td row="16" col="2" class="puzzle-cell puzzle-anim-11" id="16x2"></td>
+      <td row="16" col="3" class="puzzle-cell puzzle-anim-12" id="16x3"></td>
+      <td row="16" col="4" class="puzzle-cell puzzle-anim-13 r" id="16x4"></td>
+      <td row="16" col="5" class="puzzle-cell puzzle-anim-14" id="16x5"></td>
+      <td row="16" col="6" class="puzzle-cell puzzle-anim-15" id="16x6"></td>
+      <td row="16" col="7" class="puzzle-cell puzzle-anim-16" id="16x7"></td>
+      <td row="16" col="8" class="puzzle-cell puzzle-anim-17" id="16x8"></td>
+      <td row="16" col="9" class="puzzle-cell puzzle-anim-18 r" id="16x9"></td>
+      <td row="16" col="10" class="puzzle-cell puzzle-anim-19" id="16x10"></td>
+      <td row="16" col="11" class="puzzle-cell puzzle-anim-20" id="16x11"></td>
+      <td row="16" col="12" class="puzzle-cell puzzle-anim-21" id="16x12"></td>
+      <td row="16" col="13" class="puzzle-cell puzzle-anim-22" id="16x13"></td>
+      <td row="16" col="14" class="puzzle-cell puzzle-anim-23 r" id="16x14"></td>
+      <td row="16" col="15" class="puzzle-cell puzzle-anim-24" id="16x15"></td>
+      <td row="16" col="16" class="puzzle-cell puzzle-anim-25" id="16x16"></td>
+      <td row="16" col="17" class="puzzle-cell puzzle-anim-26" id="16x17"></td>
+      <td row="16" col="18" class="puzzle-cell puzzle-anim-27" id="16x18"></td>
+      <td row="16" col="19" class="puzzle-cell puzzle-anim-28 r" id="16x19"></td>
+      <td row="16" col="20" class="puzzle-cell puzzle-anim-29" id="16x20"></td>
+      <td row="16" col="21" class="puzzle-cell puzzle-anim-30" id="16x21"></td>
+      <td row="16" col="22" class="puzzle-cell puzzle-anim-31" id="16x22"></td>
+      <td row="16" col="23" class="puzzle-cell puzzle-anim-32" id="16x23"></td>
+      <td row="16" col="24" class="puzzle-cell puzzle-anim-33" id="16x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">8 4</td>
+      <td row="17" col="0" class="puzzle-cell puzzle-anim-8" id="17x0"></td>
+      <td row="17" col="1" class="puzzle-cell puzzle-anim-9" id="17x1"></td>
+      <td row="17" col="2" class="puzzle-cell puzzle-anim-10" id="17x2"></td>
+      <td row="17" col="3" class="puzzle-cell puzzle-anim-11" id="17x3"></td>
+      <td row="17" col="4" class="puzzle-cell puzzle-anim-12 r" id="17x4"></td>
+      <td row="17" col="5" class="puzzle-cell puzzle-anim-13" id="17x5"></td>
+      <td row="17" col="6" class="puzzle-cell puzzle-anim-14" id="17x6"></td>
+      <td row="17" col="7" class="puzzle-cell puzzle-anim-15" id="17x7"></td>
+      <td row="17" col="8" class="puzzle-cell puzzle-anim-16" id="17x8"></td>
+      <td row="17" col="9" class="puzzle-cell puzzle-anim-17 r" id="17x9"></td>
+      <td row="17" col="10" class="puzzle-cell puzzle-anim-18" id="17x10"></td>
+      <td row="17" col="11" class="puzzle-cell puzzle-anim-19" id="17x11"></td>
+      <td row="17" col="12" class="puzzle-cell puzzle-anim-20" id="17x12"></td>
+      <td row="17" col="13" class="puzzle-cell puzzle-anim-21" id="17x13"></td>
+      <td row="17" col="14" class="puzzle-cell puzzle-anim-22 r" id="17x14"></td>
+      <td row="17" col="15" class="puzzle-cell puzzle-anim-23" id="17x15"></td>
+      <td row="17" col="16" class="puzzle-cell puzzle-anim-24" id="17x16"></td>
+      <td row="17" col="17" class="puzzle-cell puzzle-anim-25" id="17x17"></td>
+      <td row="17" col="18" class="puzzle-cell puzzle-anim-26" id="17x18"></td>
+      <td row="17" col="19" class="puzzle-cell puzzle-anim-27 r" id="17x19"></td>
+      <td row="17" col="20" class="puzzle-cell puzzle-anim-28" id="17x20"></td>
+      <td row="17" col="21" class="puzzle-cell puzzle-anim-29" id="17x21"></td>
+      <td row="17" col="22" class="puzzle-cell puzzle-anim-30" id="17x22"></td>
+      <td row="17" col="23" class="puzzle-cell puzzle-anim-31" id="17x23"></td>
+      <td row="17" col="24" class="puzzle-cell puzzle-anim-32" id="17x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">8 8</td>
+      <td row="18" col="0" class="puzzle-cell puzzle-anim-7" id="18x0"></td>
+      <td row="18" col="1" class="puzzle-cell puzzle-anim-8" id="18x1"></td>
+      <td row="18" col="2" class="puzzle-cell puzzle-anim-9" id="18x2"></td>
+      <td row="18" col="3" class="puzzle-cell puzzle-anim-10" id="18x3"></td>
+      <td row="18" col="4" class="puzzle-cell puzzle-anim-11 r" id="18x4"></td>
+      <td row="18" col="5" class="puzzle-cell puzzle-anim-12" id="18x5"></td>
+      <td row="18" col="6" class="puzzle-cell puzzle-anim-13" id="18x6"></td>
+      <td row="18" col="7" class="puzzle-cell puzzle-anim-14" id="18x7"></td>
+      <td row="18" col="8" class="puzzle-cell puzzle-anim-15" id="18x8"></td>
+      <td row="18" col="9" class="puzzle-cell puzzle-anim-16 r" id="18x9"></td>
+      <td row="18" col="10" class="puzzle-cell puzzle-anim-17" id="18x10"></td>
+      <td row="18" col="11" class="puzzle-cell puzzle-anim-18" id="18x11"></td>
+      <td row="18" col="12" class="puzzle-cell puzzle-anim-19" id="18x12"></td>
+      <td row="18" col="13" class="puzzle-cell puzzle-anim-20" id="18x13"></td>
+      <td row="18" col="14" class="puzzle-cell puzzle-anim-21 r" id="18x14"></td>
+      <td row="18" col="15" class="puzzle-cell puzzle-anim-22" id="18x15"></td>
+      <td row="18" col="16" class="puzzle-cell puzzle-anim-23" id="18x16"></td>
+      <td row="18" col="17" class="puzzle-cell puzzle-anim-24" id="18x17"></td>
+      <td row="18" col="18" class="puzzle-cell puzzle-anim-25" id="18x18"></td>
+      <td row="18" col="19" class="puzzle-cell puzzle-anim-26 r" id="18x19"></td>
+      <td row="18" col="20" class="puzzle-cell puzzle-anim-27" id="18x20"></td>
+      <td row="18" col="21" class="puzzle-cell puzzle-anim-28" id="18x21"></td>
+      <td row="18" col="22" class="puzzle-cell puzzle-anim-29" id="18x22"></td>
+      <td row="18" col="23" class="puzzle-cell puzzle-anim-30" id="18x23"></td>
+      <td row="18" col="24" class="puzzle-cell puzzle-anim-31" id="18x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr class="b">
+      <td class="left-numbers">16 7</td>
+      <td row="19" col="0" class="puzzle-cell puzzle-anim-6" id="19x0"></td>
+      <td row="19" col="1" class="puzzle-cell puzzle-anim-7" id="19x1"></td>
+      <td row="19" col="2" class="puzzle-cell puzzle-anim-8" id="19x2"></td>
+      <td row="19" col="3" class="puzzle-cell puzzle-anim-9" id="19x3"></td>
+      <td row="19" col="4" class="puzzle-cell puzzle-anim-10 r" id="19x4"></td>
+      <td row="19" col="5" class="puzzle-cell puzzle-anim-11" id="19x5"></td>
+      <td row="19" col="6" class="puzzle-cell puzzle-anim-12" id="19x6"></td>
+      <td row="19" col="7" class="puzzle-cell puzzle-anim-13" id="19x7"></td>
+      <td row="19" col="8" class="puzzle-cell puzzle-anim-14" id="19x8"></td>
+      <td row="19" col="9" class="puzzle-cell puzzle-anim-15 r" id="19x9"></td>
+      <td row="19" col="10" class="puzzle-cell puzzle-anim-16" id="19x10"></td>
+      <td row="19" col="11" class="puzzle-cell puzzle-anim-17" id="19x11"></td>
+      <td row="19" col="12" class="puzzle-cell puzzle-anim-18" id="19x12"></td>
+      <td row="19" col="13" class="puzzle-cell puzzle-anim-19" id="19x13"></td>
+      <td row="19" col="14" class="puzzle-cell puzzle-anim-20 r" id="19x14"></td>
+      <td row="19" col="15" class="puzzle-cell puzzle-anim-21" id="19x15"></td>
+      <td row="19" col="16" class="puzzle-cell puzzle-anim-22" id="19x16"></td>
+      <td row="19" col="17" class="puzzle-cell puzzle-anim-23" id="19x17"></td>
+      <td row="19" col="18" class="puzzle-cell puzzle-anim-24" id="19x18"></td>
+      <td row="19" col="19" class="puzzle-cell puzzle-anim-25 r" id="19x19"></td>
+      <td row="19" col="20" class="puzzle-cell puzzle-anim-26" id="19x20"></td>
+      <td row="19" col="21" class="puzzle-cell puzzle-anim-27" id="19x21"></td>
+      <td row="19" col="22" class="puzzle-cell puzzle-anim-28" id="19x22"></td>
+      <td row="19" col="23" class="puzzle-cell puzzle-anim-29" id="19x23"></td>
+      <td row="19" col="24" class="puzzle-cell puzzle-anim-30" id="19x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">3 1</td>
+      <td row="20" col="0" class="puzzle-cell puzzle-anim-5" id="20x0"></td>
+      <td row="20" col="1" class="puzzle-cell puzzle-anim-6" id="20x1"></td>
+      <td row="20" col="2" class="puzzle-cell puzzle-anim-7" id="20x2"></td>
+      <td row="20" col="3" class="puzzle-cell puzzle-anim-8" id="20x3"></td>
+      <td row="20" col="4" class="puzzle-cell puzzle-anim-9 r" id="20x4"></td>
+      <td row="20" col="5" class="puzzle-cell puzzle-anim-10" id="20x5"></td>
+      <td row="20" col="6" class="puzzle-cell puzzle-anim-11" id="20x6"></td>
+      <td row="20" col="7" class="puzzle-cell puzzle-anim-12" id="20x7"></td>
+      <td row="20" col="8" class="puzzle-cell puzzle-anim-13" id="20x8"></td>
+      <td row="20" col="9" class="puzzle-cell puzzle-anim-14 r" id="20x9"></td>
+      <td row="20" col="10" class="puzzle-cell puzzle-anim-15" id="20x10"></td>
+      <td row="20" col="11" class="puzzle-cell puzzle-anim-16" id="20x11"></td>
+      <td row="20" col="12" class="puzzle-cell puzzle-anim-17" id="20x12"></td>
+      <td row="20" col="13" class="puzzle-cell puzzle-anim-18" id="20x13"></td>
+      <td row="20" col="14" class="puzzle-cell puzzle-anim-19 r" id="20x14"></td>
+      <td row="20" col="15" class="puzzle-cell puzzle-anim-20" id="20x15"></td>
+      <td row="20" col="16" class="puzzle-cell puzzle-anim-21" id="20x16"></td>
+      <td row="20" col="17" class="puzzle-cell puzzle-anim-22" id="20x17"></td>
+      <td row="20" col="18" class="puzzle-cell puzzle-anim-23" id="20x18"></td>
+      <td row="20" col="19" class="puzzle-cell puzzle-anim-24 r" id="20x19"></td>
+      <td row="20" col="20" class="puzzle-cell puzzle-anim-25" id="20x20"></td>
+      <td row="20" col="21" class="puzzle-cell puzzle-anim-26" id="20x21"></td>
+      <td row="20" col="22" class="puzzle-cell puzzle-anim-27" id="20x22"></td>
+      <td row="20" col="23" class="puzzle-cell puzzle-anim-28" id="20x23"></td>
+      <td row="20" col="24" class="puzzle-cell puzzle-anim-29" id="20x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">25</td>
+      <td row="21" col="0" class="puzzle-cell puzzle-anim-4" id="21x0"></td>
+      <td row="21" col="1" class="puzzle-cell puzzle-anim-5" id="21x1"></td>
+      <td row="21" col="2" class="puzzle-cell puzzle-anim-6" id="21x2"></td>
+      <td row="21" col="3" class="puzzle-cell puzzle-anim-7" id="21x3"></td>
+      <td row="21" col="4" class="puzzle-cell puzzle-anim-8 r" id="21x4"></td>
+      <td row="21" col="5" class="puzzle-cell puzzle-anim-9" id="21x5"></td>
+      <td row="21" col="6" class="puzzle-cell puzzle-anim-10" id="21x6"></td>
+      <td row="21" col="7" class="puzzle-cell puzzle-anim-11" id="21x7"></td>
+      <td row="21" col="8" class="puzzle-cell puzzle-anim-12" id="21x8"></td>
+      <td row="21" col="9" class="puzzle-cell puzzle-anim-13 r" id="21x9"></td>
+      <td row="21" col="10" class="puzzle-cell puzzle-anim-14" id="21x10"></td>
+      <td row="21" col="11" class="puzzle-cell puzzle-anim-15" id="21x11"></td>
+      <td row="21" col="12" class="puzzle-cell puzzle-anim-16" id="21x12"></td>
+      <td row="21" col="13" class="puzzle-cell puzzle-anim-17" id="21x13"></td>
+      <td row="21" col="14" class="puzzle-cell puzzle-anim-18 r" id="21x14"></td>
+      <td row="21" col="15" class="puzzle-cell puzzle-anim-19" id="21x15"></td>
+      <td row="21" col="16" class="puzzle-cell puzzle-anim-20" id="21x16"></td>
+      <td row="21" col="17" class="puzzle-cell puzzle-anim-21" id="21x17"></td>
+      <td row="21" col="18" class="puzzle-cell puzzle-anim-22" id="21x18"></td>
+      <td row="21" col="19" class="puzzle-cell puzzle-anim-23 r" id="21x19"></td>
+      <td row="21" col="20" class="puzzle-cell puzzle-anim-24" id="21x20"></td>
+      <td row="21" col="21" class="puzzle-cell puzzle-anim-25" id="21x21"></td>
+      <td row="21" col="22" class="puzzle-cell puzzle-anim-26" id="21x22"></td>
+      <td row="21" col="23" class="puzzle-cell puzzle-anim-27" id="21x23"></td>
+      <td row="21" col="24" class="puzzle-cell puzzle-anim-28" id="21x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">1 13 1</td>
+      <td row="22" col="0" class="puzzle-cell puzzle-anim-3" id="22x0"></td>
+      <td row="22" col="1" class="puzzle-cell puzzle-anim-4" id="22x1"></td>
+      <td row="22" col="2" class="puzzle-cell puzzle-anim-5" id="22x2"></td>
+      <td row="22" col="3" class="puzzle-cell puzzle-anim-6" id="22x3"></td>
+      <td row="22" col="4" class="puzzle-cell puzzle-anim-7 r" id="22x4"></td>
+      <td row="22" col="5" class="puzzle-cell puzzle-anim-8" id="22x5"></td>
+      <td row="22" col="6" class="puzzle-cell puzzle-anim-9" id="22x6"></td>
+      <td row="22" col="7" class="puzzle-cell puzzle-anim-10" id="22x7"></td>
+      <td row="22" col="8" class="puzzle-cell puzzle-anim-11" id="22x8"></td>
+      <td row="22" col="9" class="puzzle-cell puzzle-anim-12 r" id="22x9"></td>
+      <td row="22" col="10" class="puzzle-cell puzzle-anim-13" id="22x10"></td>
+      <td row="22" col="11" class="puzzle-cell puzzle-anim-14" id="22x11"></td>
+      <td row="22" col="12" class="puzzle-cell puzzle-anim-15" id="22x12"></td>
+      <td row="22" col="13" class="puzzle-cell puzzle-anim-16" id="22x13"></td>
+      <td row="22" col="14" class="puzzle-cell puzzle-anim-17 r" id="22x14"></td>
+      <td row="22" col="15" class="puzzle-cell puzzle-anim-18" id="22x15"></td>
+      <td row="22" col="16" class="puzzle-cell puzzle-anim-19" id="22x16"></td>
+      <td row="22" col="17" class="puzzle-cell puzzle-anim-20" id="22x17"></td>
+      <td row="22" col="18" class="puzzle-cell puzzle-anim-21" id="22x18"></td>
+      <td row="22" col="19" class="puzzle-cell puzzle-anim-22 r" id="22x19"></td>
+      <td row="22" col="20" class="puzzle-cell puzzle-anim-23" id="22x20"></td>
+      <td row="22" col="21" class="puzzle-cell puzzle-anim-24" id="22x21"></td>
+      <td row="22" col="22" class="puzzle-cell puzzle-anim-25" id="22x22"></td>
+      <td row="22" col="23" class="puzzle-cell puzzle-anim-26" id="22x23"></td>
+      <td row="22" col="24" class="puzzle-cell puzzle-anim-27" id="22x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">6 12</td>
+      <td row="23" col="0" class="puzzle-cell puzzle-anim-2" id="23x0"></td>
+      <td row="23" col="1" class="puzzle-cell puzzle-anim-3" id="23x1"></td>
+      <td row="23" col="2" class="puzzle-cell puzzle-anim-4" id="23x2"></td>
+      <td row="23" col="3" class="puzzle-cell puzzle-anim-5" id="23x3"></td>
+      <td row="23" col="4" class="puzzle-cell puzzle-anim-6 r" id="23x4"></td>
+      <td row="23" col="5" class="puzzle-cell puzzle-anim-7" id="23x5"></td>
+      <td row="23" col="6" class="puzzle-cell puzzle-anim-8" id="23x6"></td>
+      <td row="23" col="7" class="puzzle-cell puzzle-anim-9" id="23x7"></td>
+      <td row="23" col="8" class="puzzle-cell puzzle-anim-10" id="23x8"></td>
+      <td row="23" col="9" class="puzzle-cell puzzle-anim-11 r" id="23x9"></td>
+      <td row="23" col="10" class="puzzle-cell puzzle-anim-12" id="23x10"></td>
+      <td row="23" col="11" class="puzzle-cell puzzle-anim-13" id="23x11"></td>
+      <td row="23" col="12" class="puzzle-cell puzzle-anim-14" id="23x12"></td>
+      <td row="23" col="13" class="puzzle-cell puzzle-anim-15" id="23x13"></td>
+      <td row="23" col="14" class="puzzle-cell puzzle-anim-16 r" id="23x14"></td>
+      <td row="23" col="15" class="puzzle-cell puzzle-anim-17" id="23x15"></td>
+      <td row="23" col="16" class="puzzle-cell puzzle-anim-18" id="23x16"></td>
+      <td row="23" col="17" class="puzzle-cell puzzle-anim-19" id="23x17"></td>
+      <td row="23" col="18" class="puzzle-cell puzzle-anim-20" id="23x18"></td>
+      <td row="23" col="19" class="puzzle-cell puzzle-anim-21 r" id="23x19"></td>
+      <td row="23" col="20" class="puzzle-cell puzzle-anim-22" id="23x20"></td>
+      <td row="23" col="21" class="puzzle-cell puzzle-anim-23" id="23x21"></td>
+      <td row="23" col="22" class="puzzle-cell puzzle-anim-24" id="23x22"></td>
+      <td row="23" col="23" class="puzzle-cell puzzle-anim-25" id="23x23"></td>
+      <td row="23" col="24" class="puzzle-cell puzzle-anim-26" id="23x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="left-numbers">9</td>
+      <td row="24" col="0" class="puzzle-cell puzzle-anim-1" id="24x0"></td>
+      <td row="24" col="1" class="puzzle-cell puzzle-anim-2" id="24x1"></td>
+      <td row="24" col="2" class="puzzle-cell puzzle-anim-3" id="24x2"></td>
+      <td row="24" col="3" class="puzzle-cell puzzle-anim-4" id="24x3"></td>
+      <td row="24" col="4" class="puzzle-cell puzzle-anim-5 r" id="24x4"></td>
+      <td row="24" col="5" class="puzzle-cell puzzle-anim-6" id="24x5"></td>
+      <td row="24" col="6" class="puzzle-cell puzzle-anim-7" id="24x6"></td>
+      <td row="24" col="7" class="puzzle-cell puzzle-anim-8" id="24x7"></td>
+      <td row="24" col="8" class="puzzle-cell puzzle-anim-9" id="24x8"></td>
+      <td row="24" col="9" class="puzzle-cell puzzle-anim-10 r" id="24x9"></td>
+      <td row="24" col="10" class="puzzle-cell puzzle-anim-11" id="24x10"></td>
+      <td row="24" col="11" class="puzzle-cell puzzle-anim-12" id="24x11"></td>
+      <td row="24" col="12" class="puzzle-cell puzzle-anim-13" id="24x12"></td>
+      <td row="24" col="13" class="puzzle-cell puzzle-anim-14" id="24x13"></td>
+      <td row="24" col="14" class="puzzle-cell puzzle-anim-15 r" id="24x14"></td>
+      <td row="24" col="15" class="puzzle-cell puzzle-anim-16" id="24x15"></td>
+      <td row="24" col="16" class="puzzle-cell puzzle-anim-17" id="24x16"></td>
+      <td row="24" col="17" class="puzzle-cell puzzle-anim-18" id="24x17"></td>
+      <td row="24" col="18" class="puzzle-cell puzzle-anim-19" id="24x18"></td>
+      <td row="24" col="19" class="puzzle-cell puzzle-anim-20 r" id="24x19"></td>
+      <td row="24" col="20" class="puzzle-cell puzzle-anim-21" id="24x20"></td>
+      <td row="24" col="21" class="puzzle-cell puzzle-anim-22" id="24x21"></td>
+      <td row="24" col="22" class="puzzle-cell puzzle-anim-23" id="24x22"></td>
+      <td row="24" col="23" class="puzzle-cell puzzle-anim-24" id="24x23"></td>
+      <td row="24" col="24" class="puzzle-cell puzzle-anim-25" id="24x24"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    <tr>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+      <td class="puzzle-out"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
