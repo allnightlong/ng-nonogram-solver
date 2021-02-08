@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Board} from '../model/Board';
 
 @Component({
   selector: 'app-root',
@@ -7,15 +8,29 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'nonogram-angular-solver';
+  board: Board;
 
   constructor(private httpClient: HttpClient) {
   }
 
   ngOnInit(): void {
-    this.httpClient.get('assets/data/source.json').subscribe(data => {
-      console.log(data);
-      // this.products = data;
-    });
+    this.httpClient
+      .get('assets/data/source.json')
+      .subscribe(data => {
+          this.board = new Board(
+            data['width'],
+            data['height'],
+            data['data_top'],
+            data['data_left']
+          );
+        }
+      );
   }
+
+  public resolve(event) {
+    // this.board$.map
+    console.log(this.board);
+    console.log(this.board.top[0][1]);
+  }
+
 }
