@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Board} from '../model/Board';
+import {Line} from '../model/Line';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +29,9 @@ export class AppComponent implements OnInit {
   }
 
   public resolve(): boolean {
+    const bitSets = Line.sequences(['1', '11'], 3);
+    console.log(bitSets);
+
     return false;
   }
 
