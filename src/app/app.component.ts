@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Board} from '../model/Board';
-import {Line} from '../model/Line';
+import {Generator} from '../model/Generator';
+import {ArrayUtils} from '../model/ArrayUtils';
 
 @Component({
   selector: 'app-root',
@@ -21,17 +22,16 @@ export class AppComponent implements OnInit {
           this.board = new Board(
             data['width'],
             data['height'],
-            data['data_top'],
-            data['data_left']
+            ArrayUtils.clean(data['data_top']),
+            ArrayUtils.clean(data['data_left'])
           );
         }
       );
   }
 
   public resolve(): boolean {
-    const bitSets = Line.sequences(['1', '11'], 3);
-    console.log(bitSets);
-
+    const candidates = Generator.candidates(this.board.left, this.board.height);
+    console.log(candidates);
     return false;
   }
 
