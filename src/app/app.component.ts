@@ -27,10 +27,18 @@ export class AppComponent implements OnInit {
       );
   }
 
-  public resolve(event) {
+  public resolve(event): void {
     // this.board$.map
     console.log(this.board);
     console.log(this.board.top[0][1]);
+  }
+
+  public cell(x, y): void {
+    console.log(x);
+    console.log(y);
+    console.log(this.board.board[x][y]);
+
+    this.board.board[x][y] = (this.board.board[x][y] + 1) % 3;
   }
 
 }

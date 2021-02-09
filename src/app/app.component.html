@@ -20,14 +20,20 @@
       </td>
     </tr>
 
-    <tr *ngFor="let row of board.left; index as i;" [class.b]="(i % 5) == 4">
+    <tr *ngFor="let row of board.left; index as x;" [class.b]="(x % 5) == 4">
       <td class="left-numbers">
         <ng-container *ngFor="let cell of row">
           {{cell}}
         </ng-container>
       </td>
 
-      <td class="puzzle-cell" *ngFor="let column of board.top; index as i;" [class.r]="(i % 5) == 4"></td>
+      <td class="puzzle-cell" (click)="cell(x, y)"
+          *ngFor="let column of board.top; index as y;"
+          [class.puzzle-cell-on]="(board.isOn(x,y))"
+          [class.puzzle-cell-off]="(board.isOff(x,y))"
+          [class.r]="(y % 5) == 4">
+        <!--        {{board.board[x][y]}}-->
+      </td>
     </tr>
 
     </tbody>

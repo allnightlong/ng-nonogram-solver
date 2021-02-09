@@ -135,3 +135,7 @@ td.puzzle-cell.puzzle-cell-on {
   background: #000
 }
 
+td.puzzle-cell.puzzle-cell-off {
+  background: #f00
+}
+
