@@ -24,6 +24,10 @@ export class Board {
     }
   }
 
+  set(x: number, y: number, value: number): void {
+    this.board[x][y] = value;
+  }
+
   isOn(x: number, y: number): boolean {
     return this.board[x][y] === Board.on;
   }

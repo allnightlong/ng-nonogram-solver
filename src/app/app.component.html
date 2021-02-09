@@ -27,7 +27,9 @@
         </ng-container>
       </td>
 
-      <td class="puzzle-cell" (click)="cell(x, y)"
+      <td class="puzzle-cell"
+          (click)="cell(x, y, $event)"
+          (contextmenu)="cell(x,y,$event)"
           *ngFor="let column of board.top; index as y;"
           [class.puzzle-cell-on]="(board.isOn(x,y))"
           [class.puzzle-cell-off]="(board.isOff(x,y))"

@@ -33,12 +33,24 @@ export class AppComponent implements OnInit {
     console.log(this.board.top[0][1]);
   }
 
-  public cell(x, y): void {
-    console.log(x);
-    console.log(y);
-    console.log(this.board.board[x][y]);
+  public cell(x, y, $event: MouseEvent): boolean {
+    console.log($event);
 
-    this.board.board[x][y] = (this.board.board[x][y] + 1) % 3;
+    const button = $event.button;
+    const current = this.board.board[x][y];
+
+    console.log(button);
+    console.log(current);
+
+
+    if (button === 0) {
+      this.board.set(x, y, current === Board.on ? Board.empty : Board.on);
+    }
+
+    if (button === 2) {
+      this.board.set(x, y, current === Board.off ? Board.empty : Board.off);
+    }
+    return false;
   }
 
 }
