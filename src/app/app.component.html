@@ -3,7 +3,7 @@
 
 
   <h3 *ngIf="board"> {{board.width}} x {{board.height}}
-    <button (click)="resolve($event)">resolve</button>
+    <button (click)="resolve()">resolve</button>
   </h3>
 
 
@@ -12,28 +12,28 @@
 
     <tr class="b">
       <td class="r">&nbsp;</td>
-      <td *ngFor="let column of board.top; index as i;" [class.r]="(i % 5) == 4">
+      <td *ngFor="let top of board.top; index as i;" [class.r]="(i % 5) == 4">
 
-        <ng-container *ngFor="let cell of column">
+        <ng-container *ngFor="let cell of top">
           {{cell}}<br/>
         </ng-container>
       </td>
     </tr>
 
-    <tr *ngFor="let row of board.left; index as x;" [class.b]="(x % 5) == 4">
+    <tr *ngFor="let left of board.left; index as row;" [class.b]="(row % 5) == 4">
       <td class="left-numbers">
-        <ng-container *ngFor="let cell of row">
+        <ng-container *ngFor="let cell of left">
           {{cell}}
         </ng-container>
       </td>
 
       <td class="puzzle-cell"
-          (click)="cell(x, y, $event)"
-          (contextmenu)="cell(x,y,$event)"
-          *ngFor="let column of board.top; index as y;"
-          [class.puzzle-cell-on]="(board.isOn(x,y))"
-          [class.puzzle-cell-off]="(board.isOff(x,y))"
-          [class.r]="(y % 5) == 4">
+          *ngFor="let top of board.top; index as column;"
+          (click)="cell(row, column, $event)"
+          (contextmenu)="cell(row,column,$event)"
+          [class.puzzle-cell-on]="(board.isOn(row,column))"
+          [class.puzzle-cell-off]="(board.isOff(row,column))"
+          [class.r]="(column % 5) == 4">
         <!--        {{board.board[x][y]}}-->
       </td>
     </tr>

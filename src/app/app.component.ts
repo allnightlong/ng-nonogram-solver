@@ -27,21 +27,13 @@ export class AppComponent implements OnInit {
       );
   }
 
-  public resolve(event): void {
-    // this.board$.map
-    console.log(this.board);
-    console.log(this.board.top[0][1]);
+  public resolve(): boolean {
+    return false;
   }
 
   public cell(x, y, $event: MouseEvent): boolean {
-    console.log($event);
-
     const button = $event.button;
-    const current = this.board.board[x][y];
-
-    console.log(button);
-    console.log(current);
-
+    const current = this.board.get(x, y);
 
     if (button === 0) {
       this.board.set(x, y, current === Board.on ? Board.empty : Board.on);

@@ -24,15 +24,19 @@ export class Board {
     }
   }
 
-  set(x: number, y: number, value: number): void {
-    this.board[x][y] = value;
+  get(row: number, column: number): number {
+    return this.board[row][column];
   }
 
-  isOn(x: number, y: number): boolean {
-    return this.board[x][y] === Board.on;
+  set(row: number, column: number, value: number): void {
+    this.board[row][column] = value;
   }
 
-  isOff(x: number, y: number): boolean {
-    return this.board[x][y] === Board.off;
+  isOn(row: number, column: number): boolean {
+    return this.board[row][column] === Board.on;
+  }
+
+  isOff(row: number, column: number): boolean {
+    return this.board[row][column] === Board.off;
   }
 }
